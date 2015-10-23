@@ -33,4 +33,61 @@
         android:layout_toRightOf="@+id/tempretureLable"
         android:layout_toEndOf="@+id/tempretureLable"
         android:src="@drawable/degree" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AT 5.00 AM It Will be"
+        android:textColor="#80ffffff"
+        android:textSize="18sp"
+        android:id="@+id/textView"
+        android:layout_above="@+id/tempretureLable"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dhaka, Bangladesh"
+        android:id="@+id/location"
+        android:textSize="24sp"
+        android:textColor="#fff"
+        android:layout_marginBottom="60dp"
+        android:layout_above="@+id/textView"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/iconimageView"
+        android:src="@drawable/cloudy_night"
+        android:layout_marginRight="40dp"
+        android:layout_alignBottom="@+id/location"
+        android:layout_toLeftOf="@+id/textView"
+        android:layout_toStartOf="@+id/textView" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tempretureLable"
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:id="@+id/textView2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:id="@+id/textView3" />
+        </LinearLayout>
+    </LinearLayout>
 </RelativeLayout>
