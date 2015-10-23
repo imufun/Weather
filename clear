@@ -1,0 +1,297 @@
+[33mcommit c218c90fa312268bdcdacfbd4e6bb33bcb5bb1f0[m
+Author: Imran <imufun1@gmail.com>
+Date:   Wed Oct 21 23:15:26 2015 +0600
+
+    Dhaka Weather
+
+[1mdiff --git a/.gitignore b/.gitignore[m
+[1mnew file mode 100644[m
+[1mindex 0000000..9c4de58[m
+[1m--- /dev/null[m
+[1m+++ b/.gitignore[m
+[36m@@ -0,0 +1,7 @@[m
+[32m+[m[32m.gradle[m
+[32m+[m[32m/local.properties[m
+[32m+[m[32m/.idea/workspace.xml[m
+[32m+[m[32m/.idea/libraries[m
+[32m+[m[32m.DS_Store[m
+[32m+[m[32m/build[m
+[32m+[m[32m/captures[m
+[1mdiff --git a/.idea/.name b/.idea/.name[m
+[1mnew file mode 100644[m
+[1mindex 0000000..15e6298[m
+[1m--- /dev/null[m
+[1m+++ b/.idea/.name[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32mDhaka Weather[m
+\ No newline at end of file[m
+[1mdiff --git a/.idea/compiler.xml b/.idea/compiler.xml[m
+[1mnew file mode 100644[m
+[1mindex 0000000..96cc43e[m
+[1m--- /dev/null[m
+[1m+++ b/.idea/compiler.xml[m
+[36m@@ -0,0 +1,22 @@[m
+[32m+[m[32m<?xml version="1.0" encoding="UTF-8"?>[m
+[32m+[m[32m<project version="4">[m
+[32m+[m[32m  <component name="CompilerConfiguration">[m
+[32m+[m[32m    <resourceExtensions />[m
+[32m+[m[32m    <wildcardResourcePatterns>[m
+[32m+[m[32m      <entry name="!?*.java" />[m
+[32m+[m[32m      <entry name="!?*.form" />[m
+[32m+[m[32m      <entry name="!?*.class" />[m
+[32m+[m[32m      <entry name="!?*.groovy" />[m
+[32m+[m[32m      <entry name="!?*.scala" />[m
+[32m+[m[32m      <entry name="!?*.flex" />[m
+[32m+[m[32m      <entry name="!?*.kt" />[m
+[32m+[m[32m      <entry name="!?*.clj" />[m
+[32m+[m[32m      <entry name="!?*.aj" />[m
+[32m+[m[32m    </wildcardResourcePatterns>[m
+[32m+[m[32m    <annotationProcessing>[m
+[32m+[m[32m      <profile default="true" name="Default" enabled="false">[m
+[32m+[m[32m        <processorPath useClasspath="true" />[m
+[32m+[m[32m      </profile>[m
+[32m+[m[32m    </annotationProcessing>[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m</project>[m
+\ No newline at end of file[m
+[1mdiff --git a/.idea/copyright/profiles_settings.xml b/.idea/copyright/profiles_settings.xml[m
+[1mnew file mode 100644[m
+[1mindex 0000000..e7bedf3[m
+[1m--- /dev/null[m
+[1m+++ b/.idea/copyright/profiles_settings.xml[m
+[36m@@ -0,0 +1,3 @@[m
+[32m+[m[32m<component name="CopyrightManager">[m
+[32m+[m[32m  <settings default="" />[m
+[32m+[m[32m</component>[m
+\ No newline at end of file[m
+[1mdiff --git a/.idea/encodings.xml b/.idea/encodings.xml[m
+[1mnew file mode 100644[m
+[1mindex 0000000..97626ba[m
+[1m--- /dev/null[m
+[1m+++ b/.idea/encodings.xml[m
+[36m@@ -0,0 +1,6 @@[m
+[32m+[m[32m<?xml version="1.0" encoding="UTF-8"?>[m
+[32m+[m[32m<project version="4">[m
+[32m+[m[32m  <component name="Encoding">[m
+[32m+[m[32m    <file url="PROJECT" charset="UTF-8" />[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m</project>[m
+\ No newline at end of file[m
+[1mdiff --git a/.idea/gradle.xml b/.idea/gradle.xml[m
+[1mnew file mode 100644[m
+[1mindex 0000000..5f9069e[m
+[1m--- /dev/null[m
+[1m+++ b/.idea/gradle.xml[m
+[36m@@ -0,0 +1,19 @@[m
+[32m+[m[32m<?xml version="1.0" encoding="UTF-8"?>[m
+[32m+[m[32m<project version="4">[m
+[32m+[m[32m  <component name="GradleSettings">[m
+[32m+[m[32m    <option name="linkedExternalProjectsSettings">[m
+[32m+[m[32m      <GradleProjectSettings>[m
+[32m+[m[32m        <option name="distributionType" value="LOCAL" />[m
+[32m+[m[32m        <option name="externalProjectPath" value="$PROJECT_DIR$" />[m
+[32m+[m[32m        <option name="gradleHome" value="F:\Android Studio\gradle\gradle-2.4" />[m
+[32m+[m[32m        <option name="gradleJvm" value="1.8" />[m
+[32m+[m[32m        <option name="modules">[m
+[32m+[m[32m          <set>[m
+[32m+[m[32m            <option value="$PROJECT_DIR$" />[m
+[32m+[m[32m            <option value="$PROJECT_DIR$/app" />[m
+[32m+[m[32m          </set>[m
+[32m+[m[32m        </option>[m
+[32m+[m[32m      </GradleProjectSettings>[m
+[32m+[m[32m    </option>[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m</project>[m
+\ No newline at end of file[m
+[1mdiff --git a/.idea/misc.xml b/.idea/misc.xml[m
+[1mnew file mode 100644[m
+[1mindex 0000000..5d19981[m
+[1m--- /dev/null[m
+[1m+++ b/.idea/misc.xml[m
+[36m@@ -0,0 +1,46 @@[m
+[32m+[m[32m<?xml version="1.0" encoding="UTF-8"?>[m
+[32m+[m[32m<project version="4">[m
+[32m+[m[32m  <component name="EntryPointsManager">[m
+[32m+[m[32m    <entry_points version="2.0" />[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m  <component name="NullableNotNullManager">[m
+[32m+[m[32m    <option name="myDefaultNullable" value="android.support.annotation.Nullable" />[m
+[32m+[m[32m    <option name="myDefaultNotNull" value="android.support.annotation.NonNull" />[m
+[32m+[m[32m    <option name="myNullables">[m
+[32m+[m[32m      <value>[m
+[32m+[m[32m        <list size="4">[m
+[32m+[m[32m          <item index="0" class="java.lang.String" itemvalue="org.jetbrains.annotations.Nullable" />[m
+[32m+[m[32m          <item index="1" class="java.lang.String" itemvalue="javax.annotation.Nullable" />[m
+[32m+[m[32m          <item index="2" class="java.lang.String" itemvalue="edu.umd.cs.findbugs.annotations.Nullable" />[m
+[32m+[m[32m          <item index="3" class="java.lang.String" itemvalue="android.support.annotation.Nullable" />[m
+[32m+[m[32m        </list>[m
+[32m+[m[32m      </value>[m
+[32m+[m[32m    </option>[m
+[32m+[m[32m    <option name="myNotNulls">[m
+[32m+[m[32m      <value>[m
+[32m+[m[32m        <list size="4">[m
+[32m+[m[32m          <item index="0" class="java.lang.String" itemvalue="org.jetbrains.annotations.NotNull" />[m
+[32m+[m[32m          <item index="1" class="java.lang.String" itemvalue="javax.annotation.Nonnull" />[m
+[32m+[m[32m          <item index="2" class="java.lang.String" itemvalue="edu.umd.cs.findbugs.annotations.NonNull" />[m
+[32m+[m[32m          <item index="3" class="java.lang.String" itemvalue="android.support.annotation.NonNull" />[m
+[32m+[m[32m        </list>[m
+[32m+[m[32m      </value>[m
+[32m+[m[32m    </option>[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m  <component name="ProjectLevelVcsManager" settingsEditedManually="false">[m
+[32m+[m[32m    <OptionsSetting value="true" id="Add" />[m
+[32m+[m[32m    <OptionsSetting value="true" id="Remove" />[m
+[32m+[m[32m    <OptionsSetting value="true" id="Checkout" />[m
+[32m+[m[32m    <OptionsSetting value="true" id="Update" />[m
+[32m+[m[32m    <OptionsSetting value="true" id="Status" />[m
+[32m+[m[32m    <OptionsSetting value="true" id="Edit" />[m
+[32m+[m[32m    <ConfirmationsSetting value="0" id="Add" />[m
+[32m+[m[32m    <ConfirmationsSetting value="0" id="Remove" />[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" default="true" assert-keyword="true" jdk-15="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">[m
+[32m+[m[32m    <output url="file://$PROJECT_DIR$/build/classes" />[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m  <component name="ProjectType">[m
+[32m+[m[32m    <option name="id" value="Android" />[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m</project>[m
+\ No newline at end of file[m
+[1mdiff --git a/.idea/modules.xml b/.idea/modules.xml[m
+[1mnew file mode 100644[m
+[1mindex 0000000..5c76e00[m
+[1m--- /dev/null[m
+[1m+++ b/.idea/modules.xml[m
+[36m@@ -0,0 +1,9 @@[m
+[32m+[m[32m<?xml version="1.0" encoding="UTF-8"?>[m
+[32m+[m[32m<project version="4">[m
+[32m+[m[32m  <component name="ProjectModuleManager">[m
+[32m+[m[32m    <modules>[m
+[32m+[m[32m      <module fileurl="file://$PROJECT_DIR$/DhakaWeather.iml" filepath="$PROJECT_DIR$/DhakaWeather.iml" />[m
+[32m+[m[32m      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />[m
+[32m+[m[32m    </modules>[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m</project>[m
+\ No newline at end of file[m
+[1mdiff --git a/.idea/runConfigurations.xml b/.idea/runConfigurations.xml[m
+[1mnew file mode 100644[m
+[1mindex 0000000..7f68460[m
+[1m--- /dev/null[m
+[1m+++ b/.idea/runConfigurations.xml[m
+[36m@@ -0,0 +1,12 @@[m
+[32m+[m[32m<?xml version="1.0" encoding="UTF-8"?>[m
+[32m+[m[32m<project version="4">[m
+[32m+[m[32m  <component name="RunConfigurationProducerService">[m
+[32m+[m[32m    <option name="ignoredProducers">[m
+[32m+[m[32m      <set>[m
+[32m+[m[32m        <option value="org.jetbrains.plugins.gradle.execution.test.runner.AllInPackageGradleConfigurationProducer" />[m
+[32m+[m[32m        <option value="org.jetbrains.plugins.gradle.execution.test.runner.TestClassGradleConfigurationProducer" />[m
+[32m+[m[32m        <option value="org.jetbrains.plugins.gradle.execution.test.runner.TestMethodGradleConfigurationProducer" />[m
+[32m+[m[32m      </set>[m
+[32m+[m[32m    </option>[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m</project>[m
+\ No newline at end of file[m
+[1mdiff --git a/.idea/vcs.xml b/.idea/vcs.xml[m
+[1mnew file mode 100644[m
+[1mindex 0000000..6564d52[m
+[1m--- /dev/null[m
+[1m+++ b/.idea/vcs.xml[m
+[36m@@ -0,0 +1,6 @@[m
+[32m+[m[32m<?xml version="1.0" encoding="UTF-8"?>[m
+[32m+[m[32m<project version="4">[m
+[32m+[m[32m  <component name="VcsDirectoryMappings">[m
+[32m+[m[32m    <mapping directory="" vcs="" />[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m</project>[m
+\ No newline at end of file[m
+[1mdiff --git a/DhakaWeather.iml b/DhakaWeather.iml[m
+[1mnew file mode 100644[m
+[1mindex 0000000..5421718[m
+[1m--- /dev/null[m
+[1m+++ b/DhakaWeather.iml[m
+[36m@@ -0,0 +1,19 @@[m
+[32m+[m[32m<?xml version="1.0" encoding="UTF-8"?>[m
+[32m+[m[32m<module external.linked.project.id="DhakaWeather" external.linked.project.path="$MODULE_DIR$" external.root.project.path="$MODULE_DIR$" external.system.id="GRADLE" external.system.module.group="" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">[m
+[32m+[m[32m  <component name="FacetManager">[m
+[32m+[m[32m    <facet type="java-gradle" name="Java-Gradle">[m
+[32m+[m[32m      <configuration>[m
+[32m+[m[32m        <option name="BUILD_FOLDER_PATH" value="$MODULE_DIR$/build" />[m
+[32m+[m[32m        <option name="BUILDABLE" value="false" />[m
+[32m+[m[32m      </configuration>[m
+[32m+[m[32m    </facet>[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7" inherit-compiler-output="true">[m
+[32m+[m[32m    <exclude-output />[m
+[32m+[m[32m    <content url="file://$MODULE_DIR$">[m
+[32m+[m[32m      <excludeFolder url="file://$MODULE_DIR$/.gradle" />[m
+[32m+[m[32m    </content>[m
+[32m+[m[32m    <orderEntry type="inheritedJdk" />[m
+[32m+[m[32m    <orderEntry type="sourceFolder" forTests="false" />[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m</module>[m
+\ No newline at end of file[m
+[1mdiff --git a/app/.gitignore b/app/.gitignore[m
+[1mnew file mode 100644[m
+[1mindex 0000000..796b96d[m
+[1m--- /dev/null[m
+[1m+++ b/app/.gitignore[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32m/build[m
+[1mdiff --git a/app/app.iml b/app/app.iml[m
+[1mnew file mode 100644[m
+[1mindex 0000000..063f6fd[m
+[1m--- /dev/null[m
+[1m+++ b/app/app.iml[m
+[36m@@ -0,0 +1,103 @@[m
+[32m+[m[32m<?xml version="1.0" encoding="UTF-8"?>[m
+[32m+[m[32m<module external.linked.project.id=":app" external.linked.project.path="$MODULE_DIR$" external.root.project.path="$MODULE_DIR$/.." external.system.id="GRADLE" external.system.module.group="DhakaWeather" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">[m
+[32m+[m[32m  <component name="FacetManager">[m
+[32m+[m[32m    <facet type="android-gradle" name="Android-Gradle">[m
+[32m+[m[32m      <configuration>[m
+[32m+[m[32m        <option name="GRADLE_PROJECT_PATH" value=":app" />[m
+[32m+[m[32m      </configuration>[m
+[32m+[m[32m    </facet>[m
+[32m+[m[32m    <facet type="android" name="Android">[m
+[32m+[m[32m      <configuration>[m
+[32m+[m[32m        <option name="SELECTED_BUILD_VARIANT" value="debug" />[m
+[32m+[m[32m        <option name="SELECTED_TEST_ARTIFACT" value="_android_test_" />[m
+[32m+[m[32m        <option name="ASSEMBLE_TASK_NAME" value="assembleDebug" />[m
+[32m+[m[32m        <option name="COMPILE_JAVA_TASK_NAME" value="compileDebugSources" />[m
+[32m+[m[32m        <option name="ASSEMBLE_TEST_TASK_NAME" value="assembleDebugAndroidTest" />[m
+[32m+[m[32m        <option name="COMPILE_JAVA_TEST_TASK_NAME" value="compileDebugAndroidTestSources" />[m
+[32m+[m[32m        <afterSyncTasks>[m
+[32m+[m[32m          <task>generateDebugAndroidTestSources</task>[m
+[32m+[m[32m          <task>generateDebugSources</task>[m
+[32m+[m[32m        </afterSyncTasks>[m
+[32m+[m[32m        <option name="ALLOW_USER_CONFIGURATION" value="false" />[m
+[32m+[m[32m        <option name="MANIFEST_FILE_RELATIVE_PATH" value="/src/main/AndroidManifest.xml" />[m
+[32m+[m[32m        <option name="RES_FOLDER_RELATIVE_PATH" value="/src/main/res" />[m
+[32m+[m[32m        <option name="RES_FOLDERS_RELATIVE_PATH" value="file://$MODULE_DIR$/src/main/res" />[m
+[32m+[m[32m        <option name="ASSETS_FOLDER_RELATIVE_PATH" value="/src/main/assets" />[m
+[32m+[m[32m      </configuration>[m
+[32m+[m[32m    </facet>[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7" inherit-compiler-output="false">[m
+[32m+[m[32m    <output url="file://$MODULE_DIR$/build/intermediates/classes/debug" />[m
+[32m+[m[32m    <output-test url="file://$MODULE_DIR$/build/intermediates/classes/androidTest/debug" />[m
+[32m+[m[32m    <exclude-output />[m
+[32m+[m[32m    <content url="file://$MODULE_DIR$">[m
+[32m+[m[32m      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/r/debug" isTestSource="false" generated="true" />[m
+[32m+[m[32m      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/aidl/debug" isTestSource="false" generated="true" />[m
+[32m+[m[32m      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/buildConfig/debug" isTestSource="false" generated="true" />[m
+[32m+[m[32m      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/rs/debug" isTestSource="false" generated="true" />[m
+[32m+[m[32m      <sourceFolder url="file://$MODULE_DIR$/build/generated/res/rs/debug" type="java-resource" />[m
+[32m+[m[32m      <sourceFolder url="file://$MODULE_DIR$/build/generated/res/resValues/debug" type="java-resource" />[m
+[32m+[m[32m      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/r/androidTest/debug" isTestSource="true" generated="true" />[m
+[32m+[m[32m      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/aidl/androidTest/debug" isTestSource="true" generated="true" />[m
+[32m+[m[32m      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/buildConfig/androidTest/debug" isTestSource="true" generated="true" />[m
+[32m+[m[32m      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/rs/androidTest/debug" isTestSource="true" generated="true" />[m
+[32m+[m[32m      <sourceFolder url="file://$MODULE_DIR$/build/generated/res/rs/androidTest/debug" type="java-test-resource" />[m
+[32m+[m[32m      <sourceFolder url="file://$MODULE_DIR$/build/generated/res/resValues/androidTest/debug" type="java-test-resource" />[m
+[32m+[m[32m      <sourceFolder url="file://$MODULE_DIR$/src/debug/res" type="java-resource" />[m
+[32m+[m[32m      <sourceFolder url="file://$MODULE_DIR$/src/debug/resources" type="java-resource" />[m
+[32m+[m[32m      <sourceFolder url="file://$MODULE_DIR$/src/debug/assets" type="java-resource" />[m
+[32m+[m[32m      <sourceFolder url="file://$MODULE_DIR$/src/debug/aidl" isTestSource="false" />[m
+[32m+[m[32m      <sourceFolder url="file://$MODULE_DIR$/src/debug/java" isTestSource="false" />[m
+[32m+[m[32m      <sourceFolder url="file://$MODULE_DIR$/src/debug/jni" isTestSource="false" />[m
+[32m+[m[32m      <sourceFolder url="file://$MODULE_DIR
