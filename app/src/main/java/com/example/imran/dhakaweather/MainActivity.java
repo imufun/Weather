@@ -12,6 +12,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -32,8 +33,9 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = MainActivity.class.getName();
     private CurrentWeather mCurrentWeather;
 
-    TextView mTimeLable, humidityValue, mlocation, mprecipLable, msummerLable, precipValue;
-    ImageView miconimageView;
+    TextView mTimeLable, humidityValue, mlocation, mprecipLable, msummerLable, precipValue, tempretureLable;
+    ImageView miconimageView, refresh;
+    ProgressBar progressBar;
 
 
 //
@@ -61,14 +63,23 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         ButterKnife.bind(this);
 
+
+        final double LATITUDE = 23.7805733;
+        final double LONGITUDE = 90.279237;
+
+        tempretureLable = (TextView) findViewById(R.id.tempretureLable);
         humidityValue = (TextView) findViewById(R.id.humidityValue);
         mTimeLable = (TextView) findViewById(R.id.Timelable);
         precipValue = (TextView) findViewById(R.id.precipValue);
         miconimageView = (ImageView) findViewById(R.id.iconimageView);
-     //   mprecipLable = (TextView) findViewById(R.id.precipLable);
+        //   mprecipLable = (TextView) findViewById(R.id.precipLable);
         mlocation = (TextView) findViewById(R.id.location);
         msummerLable = (TextView) findViewById(R.id.summerLable);
+        refresh = (ImageView) findViewById(R.id.refreshImageView);
+        progressBar = (ProgressBar) findViewById(R.id.progressBar);
 
+
+        progressBar.setVisibility(View.INVISIBLE);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -79,13 +90,23 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        refresh.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getforecast(LATITUDE, LONGITUDE);
+            }
+        });
+    }
 
+    private void getforecast(double LATITUDE, double LONGITUDE) {
         String apiKeys = "c73f4b46758d0409de27820e355e733b";
-        double LATITUDE = 23.7805733;
-        double LONGITUDE = 90.279237;
+
         String forcastUrl = "https://api.forecast.io/forecast/" + apiKeys + "/" + LATITUDE + "," + LONGITUDE;
 
         if (isNetworkAvilable()) {
+
+            getToogleRefresh();
+
 
             OkHttpClient client = new OkHttpClient();
             Request request = new Request.Builder().url(forcastUrl).build();
@@ -95,11 +116,24 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onFailure(Request request, IOException e) {
 
-
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            getToogleRefresh();
+                        }
+                    });
+                    alertDialogAboutError();
                 }
 
                 @Override
                 public void onResponse(Response response) throws IOException {
+
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            getToogleRefresh();
+                        }
+                    });
                     try {
                         String jsondata = response.body().string();
                         Log.v(TAG, jsondata);
@@ -126,18 +160,30 @@ public class MainActivity extends AppCompatActivity {
         } else {
             Toast.makeText(this, R.string.network_error, Toast.LENGTH_LONG).show();
         }
+    }
 
+    private void getToogleRefresh() {
+        if (progressBar.getVisibility() == View.INVISIBLE) {
+            progressBar.setVisibility(View.VISIBLE);
+            refresh.setVisibility(View.INVISIBLE);
+
+        } else {
+            progressBar.setVisibility(View.INVISIBLE);
+            refresh.setVisibility(View.VISIBLE);
+
+        }
     }
 
     private void UpdateDisplay() {
-        humidityValue.setText(mCurrentWeather.getmTeamperature() + "");
-        mTimeLable.setText("At" + mCurrentWeather.getFormattedTime() + " It will be");
-        precipValue.setText(mCurrentWeather.getmHumidity() + "");
-      //  mprecipLable.setText(mCurrentWeather.getmPrecipChance() + "%");
+        humidityValue.setText(mCurrentWeather.getmHumidity() + "");
+        mTimeLable.setText("At" + mCurrentWeather.getFormattedTime() + " ");
+        precipValue.setText(mCurrentWeather.getmPrecipChance() + "%");
+        //  mprecipLable.setText(mCurrentWeather.getmPrecipChance() + "%");
         msummerLable.setText(mCurrentWeather.getmSummary());
 
         Drawable drawable = getResources().getDrawable(mCurrentWeather.getIconId());
         miconimageView.setImageDrawable(drawable);
+        tempretureLable.setText(mCurrentWeather.getmTeamperature() + "");
 
 
     }

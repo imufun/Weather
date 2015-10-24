@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:text="70"
+        android:text="--"
         android:textColor="@android:color/white"
         android:textSize="150sp" />
 
@@ -131,7 +131,45 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/linearLayout"
         android:layout_centerHorizontal="true"
-        android:text="Stormy chance with a metalballS"
+        android:text="Sky Report"
         android:textColor="#fff"
         android:textSize="18dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/Timelable"
+        android:layout_alignRight="@+id/Timelable"
+        android:layout_alignTop="@+id/location" />
+
+    <ImageView
+        android:id="@+id/refreshImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/refresh" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/refreshImageView"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/Farenhite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/degreeImageView"
+        android:layout_marginLeft="10dp"
+        android:layout_toEndOf="@+id/degreeImageView"
+        android:layout_toRightOf="@+id/degreeImageView"
+        android:text="F"
+        android:textColor="#fff"
+        android:textSize="24dp"
+        android:textStyle="bold" />
+
+
 </RelativeLayout>
