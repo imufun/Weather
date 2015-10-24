@@ -31,7 +31,7 @@ import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = MainActivity.class.getName();
-    private CurrentWeather mCurrentWeather;
+    private Current mCurrentWeather;
 
     TextView mTimeLable, humidityValue, mlocation, mprecipLable, msummerLable, precipValue, tempretureLable;
     ImageView miconimageView, refresh;
@@ -188,25 +188,25 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private CurrentWeather getCurrentDetalis(String jsondata) throws JSONException {
+    private Current getCurrentDetalis(String jsondata) throws JSONException {
         JSONObject forecase = new JSONObject(jsondata);
         String timezone = forecase.getString("timezone");
         JSONObject currently = forecase.getJSONObject("currently");
         Log.i(TAG, "FROM JSON" + timezone);
 
 
-        CurrentWeather currentWeather = new CurrentWeather();
-        currentWeather.setmHumidity(currently.getDouble("humidity"));
-        currentWeather.setmTime(currently.getLong("time"));
-        currentWeather.setIcon(currently.getString("icon"));
-        currentWeather.setmPrecipChance(currently.getDouble("precipProbability"));
-        currentWeather.setmSummary(currently.getString("summary"));
-        currentWeather.setmTeamperature(currently.getDouble("temperature"));
-        currentWeather.setTimezone(timezone);
+        Current current = new Current();
+        current.setmHumidity(currently.getDouble("humidity"));
+        current.setmTime(currently.getLong("time"));
+        current.setIcon(currently.getString("icon"));
+        current.setmPrecipChance(currently.getDouble("precipProbability"));
+        current.setmSummary(currently.getString("summary"));
+        current.setmTeamperature(currently.getDouble("temperature"));
+        current.setTimezone(timezone);
 
-        Log.d(TAG, currentWeather.getFormattedTime());
+        Log.d(TAG, current.getFormattedTime());
 
-        return currentWeather;
+        return current;
     }
 
     private boolean isNetworkAvilable() {
