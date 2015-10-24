@@ -61,8 +61,8 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/location"
         android:layout_marginRight="40dp"
-        android:layout_toLeftOf="@+id/textView"
-        android:layout_toStartOf="@+id/textView"
+        android:layout_toLeftOf="@+id/location"
+        android:layout_toStartOf="@+id/location"
         android:src="@drawable/cloudy_night" />
 
     <LinearLayout
@@ -93,7 +93,7 @@
                 android:id="@+id/humidityValue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0.88"
+                android:text="--"
                 android:textColor="#fff"
                 android:textSize="20sp" />
         </LinearLayout>
@@ -114,10 +114,10 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/precipLablebottom"
+                android:id="@+id/precipValue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="100%"
+                android:text="--"
                 android:textColor="#fff"
                 android:textSize="20sp"
                 android:textStyle="bold" />

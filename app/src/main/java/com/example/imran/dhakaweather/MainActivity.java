@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = MainActivity.class.getName();
     private CurrentWeather mCurrentWeather;
 
-    TextView mTimeLable, mhumidityLable, mlocation, mprecipLable, msummerLable, MtempretureLable;
+    TextView mTimeLable, humidityValue, mlocation, mprecipLable, msummerLable, precipValue;
     ImageView miconimageView;
 
 
@@ -61,11 +61,11 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         ButterKnife.bind(this);
 
-        MtempretureLable = (TextView) findViewById(R.id.tempretureLable);
+        humidityValue = (TextView) findViewById(R.id.humidityValue);
         mTimeLable = (TextView) findViewById(R.id.Timelable);
-        mhumidityLable = (TextView) findViewById(R.id.humidityLable);
+        precipValue = (TextView) findViewById(R.id.precipValue);
         miconimageView = (ImageView) findViewById(R.id.iconimageView);
-        mprecipLable = (TextView) findViewById(R.id.precipLable);
+     //   mprecipLable = (TextView) findViewById(R.id.precipLable);
         mlocation = (TextView) findViewById(R.id.location);
         msummerLable = (TextView) findViewById(R.id.summerLable);
 
@@ -130,10 +130,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void UpdateDisplay() {
-        MtempretureLable.setText(mCurrentWeather.getmTeamperature() + "");
+        humidityValue.setText(mCurrentWeather.getmTeamperature() + "");
         mTimeLable.setText("At" + mCurrentWeather.getFormattedTime() + " It will be");
-        mhumidityLable.setText(mCurrentWeather.getmHumidity() + "");
-        mprecipLable.setText(mCurrentWeather.getmPrecipChance() + "%");
+        precipValue.setText(mCurrentWeather.getmHumidity() + "");
+      //  mprecipLable.setText(mCurrentWeather.getmPrecipChance() + "%");
         msummerLable.setText(mCurrentWeather.getmSummary());
 
         Drawable drawable = getResources().getDrawable(mCurrentWeather.getIconId());
