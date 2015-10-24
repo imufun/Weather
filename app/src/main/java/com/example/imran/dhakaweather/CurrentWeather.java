@@ -44,12 +44,12 @@ public class CurrentWeather {
             iconId = R.drawable.cloudy;
         } else if (Icon.equals("wind")) {
             iconId = R.drawable.wind;
-        } else if (Icon.equals("degree")){
-            iconId =R.drawable.degree;
-        }else if (Icon.equals("partly-cloudy-day ")){
-            iconId =R.drawable.partly_cloudy;
-        }else if (Icon.equals("partly-cloudy-night")){
-            iconId =R.drawable.cloudy_night;
+        } else if (Icon.equals("degree")) {
+            iconId = R.drawable.degree;
+        } else if (Icon.equals("partly-cloudy-day ")) {
+            iconId = R.drawable.partly_cloudy;
+        } else if (Icon.equals("partly-cloudy-night")) {
+            iconId = R.drawable.cloudy_night;
         }
         return iconId;
     }
@@ -86,8 +86,8 @@ public class CurrentWeather {
     }
 
 
-    public double getmTeamperature() {
-        return mTeamperature;
+    public int getmTeamperature() {
+        return (int) Math.round(mTeamperature);
     }
 
     public void setmTeamperature(double mTeamperature) {
@@ -102,8 +102,9 @@ public class CurrentWeather {
         this.mHumidity = mHumidity;
     }
 
-    public double getmPrecipChance() {
-        return mPrecipChance;
+    public int getmPrecipChance() {
+        double precipPercentage = mPrecipChance * 100;
+        return (int) Math.round(precipPercentage);
     }
 
     public void setmPrecipChance(double mPrecipChance) {

@@ -1,297 +1,635 @@
-[33mcommit c218c90fa312268bdcdacfbd4e6bb33bcb5bb1f0[m
+[33mcommit 5b8f57c851646e8637d878723348ae19cbe2ed74[m
 Author: Imran <imufun1@gmail.com>
-Date:   Wed Oct 21 23:15:26 2015 +0600
+Date:   Sat Oct 24 01:40:18 2015 +0600
 
-    Dhaka Weather
+    new add
 
-[1mdiff --git a/.gitignore b/.gitignore[m
-[1mnew file mode 100644[m
-[1mindex 0000000..9c4de58[m
-[1m--- /dev/null[m
-[1m+++ b/.gitignore[m
-[36m@@ -0,0 +1,7 @@[m
-[32m+[m[32m.gradle[m
-[32m+[m[32m/local.properties[m
-[32m+[m[32m/.idea/workspace.xml[m
-[32m+[m[32m/.idea/libraries[m
-[32m+[m[32m.DS_Store[m
-[32m+[m[32m/build[m
-[32m+[m[32m/captures[m
-[1mdiff --git a/.idea/.name b/.idea/.name[m
-[1mnew file mode 100644[m
-[1mindex 0000000..15e6298[m
-[1m--- /dev/null[m
-[1m+++ b/.idea/.name[m
-[36m@@ -0,0 +1 @@[m
-[32m+[m[32mDhaka Weather[m
-\ No newline at end of file[m
-[1mdiff --git a/.idea/compiler.xml b/.idea/compiler.xml[m
-[1mnew file mode 100644[m
-[1mindex 0000000..96cc43e[m
-[1m--- /dev/null[m
-[1m+++ b/.idea/compiler.xml[m
-[36m@@ -0,0 +1,22 @@[m
-[32m+[m[32m<?xml version="1.0" encoding="UTF-8"?>[m
-[32m+[m[32m<project version="4">[m
-[32m+[m[32m  <component name="CompilerConfiguration">[m
-[32m+[m[32m    <resourceExtensions />[m
-[32m+[m[32m    <wildcardResourcePatterns>[m
-[32m+[m[32m      <entry name="!?*.java" />[m
-[32m+[m[32m      <entry name="!?*.form" />[m
-[32m+[m[32m      <entry name="!?*.class" />[m
-[32m+[m[32m      <entry name="!?*.groovy" />[m
-[32m+[m[32m      <entry name="!?*.scala" />[m
-[32m+[m[32m      <entry name="!?*.flex" />[m
-[32m+[m[32m      <entry name="!?*.kt" />[m
-[32m+[m[32m      <entry name="!?*.clj" />[m
-[32m+[m[32m      <entry name="!?*.aj" />[m
-[32m+[m[32m    </wildcardResourcePatterns>[m
-[32m+[m[32m    <annotationProcessing>[m
-[32m+[m[32m      <profile default="true" name="Default" enabled="false">[m
-[32m+[m[32m        <processorPath useClasspath="true" />[m
-[32m+[m[32m      </profile>[m
-[32m+[m[32m    </annotationProcessing>[m
-[32m+[m[32m  </component>[m
-[32m+[m[32m</project>[m
-\ No newline at end of file[m
-[1mdiff --git a/.idea/copyright/profiles_settings.xml b/.idea/copyright/profiles_settings.xml[m
-[1mnew file mode 100644[m
-[1mindex 0000000..e7bedf3[m
-[1m--- /dev/null[m
-[1m+++ b/.idea/copyright/profiles_settings.xml[m
-[36m@@ -0,0 +1,3 @@[m
-[32m+[m[32m<component name="CopyrightManager">[m
-[32m+[m[32m  <settings default="" />[m
-[32m+[m[32m</component>[m
-\ No newline at end of file[m
-[1mdiff --git a/.idea/encodings.xml b/.idea/encodings.xml[m
-[1mnew file mode 100644[m
-[1mindex 0000000..97626ba[m
-[1m--- /dev/null[m
-[1m+++ b/.idea/encodings.xml[m
-[36m@@ -0,0 +1,6 @@[m
-[32m+[m[32m<?xml version="1.0" encoding="UTF-8"?>[m
-[32m+[m[32m<project version="4">[m
-[32m+[m[32m  <component name="Encoding">[m
-[32m+[m[32m    <file url="PROJECT" charset="UTF-8" />[m
-[32m+[m[32m  </component>[m
-[32m+[m[32m</project>[m
-\ No newline at end of file[m
-[1mdiff --git a/.idea/gradle.xml b/.idea/gradle.xml[m
-[1mnew file mode 100644[m
-[1mindex 0000000..5f9069e[m
-[1m--- /dev/null[m
-[1m+++ b/.idea/gradle.xml[m
-[36m@@ -0,0 +1,19 @@[m
-[32m+[m[32m<?xml version="1.0" encoding="UTF-8"?>[m
-[32m+[m[32m<project version="4">[m
-[32m+[m[32m  <component name="GradleSettings">[m
-[32m+[m[32m    <option name="linkedExternalProjectsSettings">[m
-[32m+[m[32m      <GradleProjectSettings>[m
-[32m+[m[32m        <option name="distributionType" value="LOCAL" />[m
-[32m+[m[32m        <option name="externalProjectPath" value="$PROJECT_DIR$" />[m
-[32m+[m[32m        <option name="gradleHome" value="F:\Android Studio\gradle\gradle-2.4" />[m
-[32m+[m[32m        <option name="gradleJvm" value="1.8" />[m
-[32m+[m[32m        <option name="modules">[m
-[32m+[m[32m          <set>[m
-[32m+[m[32m            <option value="$PROJECT_DIR$" />[m
-[32m+[m[32m            <option value="$PROJECT_DIR$/app" />[m
-[32m+[m[32m          </set>[m
-[32m+[m[32m        </option>[m
-[32m+[m[32m      </GradleProjectSettings>[m
-[32m+[m[32m    </option>[m
-[32m+[m[32m  </component>[m
-[32m+[m[32m</project>[m
-\ No newline at end of file[m
-[1mdiff --git a/.idea/misc.xml b/.idea/misc.xml[m
-[1mnew file mode 100644[m
-[1mindex 0000000..5d19981[m
-[1m--- /dev/null[m
-[1m+++ b/.idea/misc.xml[m
-[36m@@ -0,0 +1,46 @@[m
-[32m+[m[32m<?xml version="1.0" encoding="UTF-8"?>[m
-[32m+[m[32m<project version="4">[m
-[32m+[m[32m  <component name="EntryPointsManager">[m
-[32m+[m[32m    <entry_points version="2.0" />[m
-[32m+[m[32m  </component>[m
-[32m+[m[32m  <component name="NullableNotNullManager">[m
-[32m+[m[32m    <option name="myDefaultNullable" value="android.support.annotation.Nullable" />[m
-[32m+[m[32m    <option name="myDefaultNotNull" value="android.support.annotation.NonNull" />[m
-[32m+[m[32m    <option name="myNullables">[m
-[32m+[m[32m      <value>[m
-[32m+[m[32m        <list size="4">[m
-[32m+[m[32m          <item index="0" class="java.lang.String" itemvalue="org.jetbrains.annotations.Nullable" />[m
-[32m+[m[32m          <item index="1" class="java.lang.String" itemvalue="javax.annotation.Nullable" />[m
-[32m+[m[32m          <item index="2" class="java.lang.String" itemvalue="edu.umd.cs.findbugs.annotations.Nullable" />[m
-[32m+[m[32m          <item index="3" class="java.lang.String" itemvalue="android.support.annotation.Nullable" />[m
-[32m+[m[32m        </list>[m
-[32m+[m[32m      </value>[m
-[32m+[m[32m    </option>[m
-[32m+[m[32m    <option name="myNotNulls">[m
-[32m+[m[32m      <value>[m
-[32m+[m[32m        <list size="4">[m
-[32m+[m[32m          <item index="0" class="java.lang.String" itemvalue="org.jetbrains.annotations.NotNull" />[m
-[32m+[m[32m          <item index="1" class="java.lang.String" itemvalue="javax.annotation.Nonnull" />[m
-[32m+[m[32m          <item index="2" class="java.lang.String" itemvalue="edu.umd.cs.findbugs.annotations.NonNull" />[m
-[32m+[m[32m          <item index="3" class="java.lang.String" itemvalue="android.support.annotation.NonNull" />[m
-[32m+[m[32m        </list>[m
-[32m+[m[32m      </value>[m
-[32m+[m[32m    </option>[m
-[32m+[m[32m  </component>[m
-[32m+[m[32m  <component name="ProjectLevelVcsManager" settingsEditedManually="false">[m
-[32m+[m[32m    <OptionsSetting value="true" id="Add" />[m
-[32m+[m[32m    <OptionsSetting value="true" id="Remove" />[m
-[32m+[m[32m    <OptionsSetting value="true" id="Checkout" />[m
-[32m+[m[32m    <OptionsSetting value="true" id="Update" />[m
-[32m+[m[32m    <OptionsSetting value="true" id="Status" />[m
-[32m+[m[32m    <OptionsSetting value="true" id="Edit" />[m
-[32m+[m[32m    <ConfirmationsSetting value="0" id="Add" />[m
-[32m+[m[32m    <ConfirmationsSetting value="0" id="Remove" />[m
-[32m+[m[32m  </component>[m
-[32m+[m[32m  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" default="true" assert-keyword="true" jdk-15="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">[m
-[32m+[m[32m    <output url="file://$PROJECT_DIR$/build/classes" />[m
-[32m+[m[32m  </component>[m
-[32m+[m[32m  <component name="ProjectType">[m
-[32m+[m[32m    <option name="id" value="Android" />[m
-[32m+[m[32m  </component>[m
-[32m+[m[32m</project>[m
-\ No newline at end of file[m
-[1mdiff --git a/.idea/modules.xml b/.idea/modules.xml[m
-[1mnew file mode 100644[m
-[1mindex 0000000..5c76e00[m
-[1m--- /dev/null[m
-[1m+++ b/.idea/modules.xml[m
-[36m@@ -0,0 +1,9 @@[m
-[32m+[m[32m<?xml version="1.0" encoding="UTF-8"?>[m
-[32m+[m[32m<project version="4">[m
-[32m+[m[32m  <component name="ProjectModuleManager">[m
-[32m+[m[32m    <modules>[m
-[32m+[m[32m      <module fileurl="file://$PROJECT_DIR$/DhakaWeather.iml" filepath="$PROJECT_DIR$/DhakaWeather.iml" />[m
-[32m+[m[32m      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />[m
-[32m+[m[32m    </modules>[m
-[32m+[m[32m  </component>[m
-[32m+[m[32m</project>[m
-\ No newline at end of file[m
-[1mdiff --git a/.idea/runConfigurations.xml b/.idea/runConfigurations.xml[m
-[1mnew file mode 100644[m
-[1mindex 0000000..7f68460[m
-[1m--- /dev/null[m
-[1m+++ b/.idea/runConfigurations.xml[m
-[36m@@ -0,0 +1,12 @@[m
-[32m+[m[32m<?xml version="1.0" encoding="UTF-8"?>[m
-[32m+[m[32m<project version="4">[m
-[32m+[m[32m  <component name="RunConfigurationProducerService">[m
-[32m+[m[32m    <option name="ignoredProducers">[m
-[32m+[m[32m      <set>[m
-[32m+[m[32m        <option value="org.jetbrains.plugins.gradle.execution.test.runner.AllInPackageGradleConfigurationProducer" />[m
-[32m+[m[32m        <option value="org.jetbrains.plugins.gradle.execution.test.runner.TestClassGradleConfigurationProducer" />[m
-[32m+[m[32m        <option value="org.jetbrains.plugins.gradle.execution.test.runner.TestMethodGradleConfigurationProducer" />[m
-[32m+[m[32m      </set>[m
-[32m+[m[32m    </option>[m
-[32m+[m[32m  </component>[m
-[32m+[m[32m</project>[m
-\ No newline at end of file[m
 [1mdiff --git a/.idea/vcs.xml b/.idea/vcs.xml[m
-[1mnew file mode 100644[m
-[1mindex 0000000..6564d52[m
-[1m--- /dev/null[m
+[1mindex 58eeec4..0055ddb 100644[m
+[1m--- a/.idea/vcs.xml[m
 [1m+++ b/.idea/vcs.xml[m
-[36m@@ -0,0 +1,6 @@[m
-[32m+[m[32m<?xml version="1.0" encoding="UTF-8"?>[m
-[32m+[m[32m<project version="4">[m
-[32m+[m[32m  <component name="VcsDirectoryMappings">[m
-[32m+[m[32m    <mapping directory="" vcs="" />[m
-[32m+[m[32m  </component>[m
-[32m+[m[32m</project>[m
+[36m@@ -3,6 +3,5 @@[m
+   <component name="VcsDirectoryMappings">[m
+     <mapping directory="" vcs="" />[m
+     <mapping directory="" vcs="Git" />[m
+[31m-    <mapping directory="F:/Git" vcs="Git" />[m
+   </component>[m
+ </project>[m
 \ No newline at end of file[m
-[1mdiff --git a/DhakaWeather.iml b/DhakaWeather.iml[m
-[1mnew file mode 100644[m
-[1mindex 0000000..5421718[m
-[1m--- /dev/null[m
-[1m+++ b/DhakaWeather.iml[m
-[36m@@ -0,0 +1,19 @@[m
-[32m+[m[32m<?xml version="1.0" encoding="UTF-8"?>[m
-[32m+[m[32m<module external.linked.project.id="DhakaWeather" external.linked.project.path="$MODULE_DIR$" external.root.project.path="$MODULE_DIR$" external.system.id="GRADLE" external.system.module.group="" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">[m
-[32m+[m[32m  <component name="FacetManager">[m
-[32m+[m[32m    <facet type="java-gradle" name="Java-Gradle">[m
-[32m+[m[32m      <configuration>[m
-[32m+[m[32m        <option name="BUILD_FOLDER_PATH" value="$MODULE_DIR$/build" />[m
-[32m+[m[32m        <option name="BUILDABLE" value="false" />[m
-[32m+[m[32m      </configuration>[m
-[32m+[m[32m    </facet>[m
-[32m+[m[32m  </component>[m
-[32m+[m[32m  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7" inherit-compiler-output="true">[m
-[32m+[m[32m    <exclude-output />[m
-[32m+[m[32m    <content url="file://$MODULE_DIR$">[m
-[32m+[m[32m      <excludeFolder url="file://$MODULE_DIR$/.gradle" />[m
-[32m+[m[32m    </content>[m
-[32m+[m[32m    <orderEntry type="inheritedJdk" />[m
-[32m+[m[32m    <orderEntry type="sourceFolder" forTests="false" />[m
-[32m+[m[32m  </component>[m
-[32m+[m[32m</module>[m
-\ No newline at end of file[m
-[1mdiff --git a/app/.gitignore b/app/.gitignore[m
-[1mnew file mode 100644[m
-[1mindex 0000000..796b96d[m
-[1m--- /dev/null[m
-[1m+++ b/app/.gitignore[m
-[36m@@ -0,0 +1 @@[m
-[32m+[m[32m/build[m
 [1mdiff --git a/app/app.iml b/app/app.iml[m
-[1mnew file mode 100644[m
-[1mindex 0000000..063f6fd[m
-[1m--- /dev/null[m
+[1mindex 063f6fd..d129e91 100644[m
+[1m--- a/app/app.iml[m
 [1m+++ b/app/app.iml[m
-[36m@@ -0,0 +1,103 @@[m
-[32m+[m[32m<?xml version="1.0" encoding="UTF-8"?>[m
-[32m+[m[32m<module external.linked.project.id=":app" external.linked.project.path="$MODULE_DIR$" external.root.project.path="$MODULE_DIR$/.." external.system.id="GRADLE" external.system.module.group="DhakaWeather" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">[m
-[32m+[m[32m  <component name="FacetManager">[m
-[32m+[m[32m    <facet type="android-gradle" name="Android-Gradle">[m
-[32m+[m[32m      <configuration>[m
-[32m+[m[32m        <option name="GRADLE_PROJECT_PATH" value=":app" />[m
-[32m+[m[32m      </configuration>[m
-[32m+[m[32m    </facet>[m
-[32m+[m[32m    <facet type="android" name="Android">[m
-[32m+[m[32m      <configuration>[m
-[32m+[m[32m        <option name="SELECTED_BUILD_VARIANT" value="debug" />[m
-[32m+[m[32m        <option name="SELECTED_TEST_ARTIFACT" value="_android_test_" />[m
-[32m+[m[32m        <option name="ASSEMBLE_TASK_NAME" value="assembleDebug" />[m
-[32m+[m[32m        <option name="COMPILE_JAVA_TASK_NAME" value="compileDebugSources" />[m
-[32m+[m[32m        <option name="ASSEMBLE_TEST_TASK_NAME" value="assembleDebugAndroidTest" />[m
-[32m+[m[32m        <option name="COMPILE_JAVA_TEST_TASK_NAME" value="compileDebugAndroidTestSources" />[m
-[32m+[m[32m        <afterSyncTasks>[m
-[32m+[m[32m          <task>generateDebugAndroidTestSources</task>[m
-[32m+[m[32m          <task>generateDebugSources</task>[m
-[32m+[m[32m        </afterSyncTasks>[m
-[32m+[m[32m        <option name="ALLOW_USER_CONFIGURATION" value="false" />[m
-[32m+[m[32m        <option name="MANIFEST_FILE_RELATIVE_PATH" value="/src/main/AndroidManifest.xml" />[m
-[32m+[m[32m        <option name="RES_FOLDER_RELATIVE_PATH" value="/src/main/res" />[m
-[32m+[m[32m        <option name="RES_FOLDERS_RELATIVE_PATH" value="file://$MODULE_DIR$/src/main/res" />[m
-[32m+[m[32m        <option name="ASSETS_FOLDER_RELATIVE_PATH" value="/src/main/assets" />[m
-[32m+[m[32m      </configuration>[m
-[32m+[m[32m    </facet>[m
-[32m+[m[32m  </component>[m
-[32m+[m[32m  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7" inherit-compiler-output="false">[m
-[32m+[m[32m    <output url="file://$MODULE_DIR$/build/intermediates/classes/debug" />[m
-[32m+[m[32m    <output-test url="file://$MODULE_DIR$/build/intermediates/classes/androidTest/debug" />[m
-[32m+[m[32m    <exclude-output />[m
-[32m+[m[32m    <content url="file://$MODULE_DIR$">[m
-[32m+[m[32m      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/r/debug" isTestSource="false" generated="true" />[m
-[32m+[m[32m      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/aidl/debug" isTestSource="false" generated="true" />[m
-[32m+[m[32m      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/buildConfig/debug" isTestSource="false" generated="true" />[m
-[32m+[m[32m      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/rs/debug" isTestSource="false" generated="true" />[m
-[32m+[m[32m      <sourceFolder url="file://$MODULE_DIR$/build/generated/res/rs/debug" type="java-resource" />[m
-[32m+[m[32m      <sourceFolder url="file://$MODULE_DIR$/build/generated/res/resValues/debug" type="java-resource" />[m
-[32m+[m[32m      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/r/androidTest/debug" isTestSource="true" generated="true" />[m
-[32m+[m[32m      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/aidl/androidTest/debug" isTestSource="true" generated="true" />[m
-[32m+[m[32m      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/buildConfig/androidTest/debug" isTestSource="true" generated="true" />[m
-[32m+[m[32m      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/rs/androidTest/debug" isTestSource="true" generated="true" />[m
-[32m+[m[32m      <sourceFolder url="file://$MODULE_DIR$/build/generated/res/rs/androidTest/debug" type="java-test-resource" />[m
-[32m+[m[32m      <sourceFolder url="file://$MODULE_DIR$/build/generated/res/resValues/androidTest/debug" type="java-test-resource" />[m
-[32m+[m[32m      <sourceFolder url="file://$MODULE_DIR$/src/debug/res" type="java-resource" />[m
-[32m+[m[32m      <sourceFolder url="file://$MODULE_DIR$/src/debug/resources" type="java-resource" />[m
-[32m+[m[32m      <sourceFolder url="file://$MODULE_DIR$/src/debug/assets" type="java-resource" />[m
-[32m+[m[32m      <sourceFolder url="file://$MODULE_DIR$/src/debug/aidl" isTestSource="false" />[m
-[32m+[m[32m      <sourceFolder url="file://$MODULE_DIR$/src/debug/java" isTestSource="false" />[m
-[32m+[m[32m      <sourceFolder url="file://$MODULE_DIR$/src/debug/jni" isTestSource="false" />[m
-[32m+[m[32m      <sourceFolder url="file://$MODULE_DIR
+[36m@@ -92,6 +92,7 @@[m
+     </content>[m
+     <orderEntry type="jdk" jdkName="Android API 23 Platform" jdkType="Android SDK" />[m
+     <orderEntry type="sourceFolder" forTests="false" />[m
+[32m+[m[32m    <orderEntry type="library" exported="" name="butterknife-7.0.1" level="project" />[m
+     <orderEntry type="library" exported="" name="recyclerview-v7-23.1.0" level="project" />[m
+     <orderEntry type="library" exported="" name="okio-1.6.0" level="project" />[m
+     <orderEntry type="library" exported="" name="okhttp-2.5.0" level="project" />[m
+[1mdiff --git a/app/build.gradle b/app/build.gradle[m
+[1mindex 0d977d9..49b571f 100644[m
+[1m--- a/app/build.gradle[m
+[1m+++ b/app/build.gradle[m
+[36m@@ -25,4 +25,5 @@[m [mdependencies {[m
+     compile 'com.android.support:appcompat-v7:23.1.0'[m
+     compile 'com.android.support:design:23.1.0'[m
+     compile 'com.squareup.okhttp:okhttp:2.5.0'[m
+[32m+[m[32m    compile 'com.jakewharton:butterknife:7.0.1'[m
+ }[m
+[1mdiff --git a/app/src/main/java/com/example/imran/dhakaweather/MainActivity.java b/app/src/main/java/com/example/imran/dhakaweather/MainActivity.java[m
+[1mindex 5bf30bc..bfbd717 100644[m
+[1m--- a/app/src/main/java/com/example/imran/dhakaweather/MainActivity.java[m
+[1m+++ b/app/src/main/java/com/example/imran/dhakaweather/MainActivity.java[m
+[36m@@ -10,8 +10,8 @@[m [mimport android.support.v7.app.AppCompatActivity;[m
+ import android.support.v7.widget.Toolbar;[m
+ import android.util.Log;[m
+ import android.view.View;[m
+[31m-import android.view.Menu;[m
+[31m-import android.view.MenuItem;[m
+[32m+[m[32mimport android.widget.ImageView;[m
+[32m+[m[32mimport android.widget.TextView;[m
+ import android.widget.Toast;[m
+ [m
+ import com.squareup.okhttp.Call;[m
+[36m@@ -25,15 +25,50 @@[m [mimport org.json.JSONObject;[m
+ [m
+ import java.io.IOException;[m
+ [m
+[32m+[m[32mimport butterknife.Bind;[m
+[32m+[m[32mimport butterknife.ButterKnife;[m
+[32m+[m
+ public class MainActivity extends AppCompatActivity {[m
+     private static final String TAG = MainActivity.class.getName();[m
+     private CurrentWeather mCurrentWeather;[m
+[32m+[m
+[32m+[m[32m    TextView mTimeLable, mhumidityLable, mlocation, mprecipLable, msummerLable, MtempretureLable;[m
+[32m+[m[32m    ImageView miconimageView;[m
+[32m+[m
+[32m+[m
+[32m+[m[32m//[m
+[32m+[m[32m//    @Bind(R.id.Timelable)[m
+[32m+[m[32m//    TextView mTimeLable;[m
+[32m+[m[32m//    @Bind(R.id.humidityLable)[m
+[32m+[m[32m//    TextView mhumidityLable;[m
+[32m+[m[32m//    @Bind(R.id.iconimageView)[m
+[32m+[m[32m//    TextView miconimageView;[m
+[32m+[m[32m//    @Bind(R.id.location)[m
+[32m+[m[32m//    TextView mlocation;[m
+[32m+[m[32m//    @Bind(R.id.precipLable)[m
+[32m+[m[32m//    TextView mprecipLable;[m
+[32m+[m[32m//    @Bind(R.id.summerLable)[m
+[32m+[m[32m//    TextView msummerLable;[m
+[32m+[m[32m//    @Bind(R.id.tempretureLable)[m
+[32m+[m[32m    //  TextView MtempretureLable;[m
+[32m+[m
+[32m+[m
+     @Override[m
+     protected void onCreate(Bundle savedInstanceState) {[m
+         super.onCreate(savedInstanceState);[m
+         setContentView(R.layout.activity_main);[m
+         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);[m
+         setSupportActionBar(toolbar);[m
+[32m+[m[32m        ButterKnife.bind(this);[m
+[32m+[m
+[32m+[m[32m        MtempretureLable = (TextView) findViewById(R.id.tempretureLable);[m
+[32m+[m[32m        mTimeLable = (TextView) findViewById(R.id.Timelable);[m
+[32m+[m[32m        mhumidityLable = (TextView) findViewById(R.id.humidityLable);[m
+[32m+[m[32m        miconimageView = (ImageView) findViewById(R.id.iconimageView);[m
+[32m+[m[32m        mprecipLable = (TextView) findViewById(R.id.precipLable);[m
+[32m+[m[32m        mlocation = (TextView) findViewById(R.id.location);[m
+[32m+[m[32m        msummerLable = (TextView) findViewById(R.id.summerLable);[m
+[32m+[m
+ [m
+         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);[m
+         fab.setOnClickListener(new View.OnClickListener() {[m
+[36m@@ -45,11 +80,10 @@[m [mpublic class MainActivity extends AppCompatActivity {[m
+         });[m
+ [m
+ [m
+[31m-[m
+[31m-    String apiKeys = "c73f4b46758d0409de27820e355e733b";[m
+[31m-    double LATITUDE = 23.7805733;[m
+[31m-    double LONGITUDE = 90.279237;[m
+[31m-    String forcastUrl = "https://api.forecast.io/forecast/" + apiKeys + "/" + LATITUDE + "," + LONGITUDE;[m
+[32m+[m[32m        String apiKeys = "c73f4b46758d0409de27820e355e733b";[m
+[32m+[m[32m        double LATITUDE = 23.7805733;[m
+[32m+[m[32m        double LONGITUDE = 90.279237;[m
+[32m+[m[32m        String forcastUrl = "https://api.forecast.io/forecast/" + apiKeys + "/" + LATITUDE + "," + LONGITUDE;[m
+ [m
+         if (isNetworkAvilable()) {[m
+ [m
+[36m@@ -71,6 +105,13 @@[m [mpublic class MainActivity extends AppCompatActivity {[m
+                         Log.v(TAG, jsondata);[m
+                         if (response.isSuccessful()) {[m
+                             mCurrentWeather = getCurrentDetalis(jsondata);[m
+[32m+[m[32m                            runOnUiThread(new Runnable() {[m
+[32m+[m[32m                                @Override[m
+[32m+[m[32m                                public void run() {[m
+[32m+[m[32m                                    UpdateDisplay();[m
+[32m+[m[32m                                }[m
+[32m+[m[32m                            });[m
+[32m+[m
+                         } else {[m
+                             alertDialogAboutError();[m
+                         }[m
+[36m@@ -86,7 +127,17 @@[m [mpublic class MainActivity extends AppCompatActivity {[m
+             Toast.makeText(this, R.string.network_error, Toast.LENGTH_LONG).show();[m
+         }[m
+ [m
+[31m-}[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    private void UpdateDisplay() {[m
+[32m+[m[32m        MtempretureLable.setText(mCurrentWeather.getmTeamperature() + "");[m
+[32m+[m[32m        mTimeLable.setText("At" + mCurrentWeather.getFormattedTime() + " It will be");[m
+[32m+[m[32m        mhumidityLable.setText(mCurrentWeather.getmHumidity() + "");[m
+[32m+[m[32m        mprecipLable.setText(mCurrentWeather.getmPrecipChance() + "");[m
+[32m+[m[32m        msummerLable.setText(mCurrentWeather.getmSummary());[m
+[32m+[m
+[32m+[m
+[32m+[m[32m    }[m
+ [m
+     private CurrentWeather getCurrentDetalis(String jsondata) throws JSONException {[m
+         JSONObject forecase = new JSONObject(jsondata);[m
+[36m@@ -128,5 +179,4 @@[m [mpublic class MainActivity extends AppCompatActivity {[m
+     }[m
+ [m
+ [m
+[31m-[m
+ }[m
+[1mdiff --git a/app/src/main/res/layout/content_main.xml b/app/src/main/res/layout/content_main.xml[m
+[1mindex 3debafe..71de7da 100644[m
+[1m--- a/app/src/main/res/layout/content_main.xml[m
+[1m+++ b/app/src/main/res/layout/content_main.xml[m
+[36m@@ -4,90 +4,134 @@[m
+     xmlns:tools="http://schemas.android.com/tools"[m
+     android:layout_width="match_parent"[m
+     android:layout_height="match_parent"[m
+[32m+[m[32m    android:background="#ce475ac1"[m
+     android:paddingBottom="@dimen/activity_vertical_margin"[m
+     android:paddingLeft="@dimen/activity_horizontal_margin"[m
+     android:paddingRight="@dimen/activity_horizontal_margin"[m
+     android:paddingTop="@dimen/activity_vertical_margin"[m
+     app:layout_behavior="@string/appbar_scrolling_view_behavior"[m
+     tools:context=".MainActivity"[m
+[31m-    tools:showIn="@layout/activity_main"[m
+[31m-    android:background="#ce475ac1">[m
+[32m+[m[32m    tools:showIn="@layout/activity_main">[m
+ [m
+ [m
+     <TextView[m
+[32m+[m[32m        android:id="@+id/tempretureLable"[m
+         android:layout_width="wrap_content"[m
+         android:layout_height="wrap_content"[m
+[32m+[m[32m        android:layout_centerHorizontal="true"[m
+[32m+[m[32m        android:layout_centerVertical="true"[m
+         android:text="70"[m
+[31m-        android:id="@+id/tempretureLable"[m
+         android:textColor="@android:color/white"[m
+[31m-        android:textSize="150sp"[m
+[31m-        android:layout_centerVertical="true"[m
+[31m-        android:layout_centerHorizontal="true" />[m
+[32m+[m[32m        android:textSize="150sp" />[m
+ [m
+     <ImageView[m
+[32m+[m[32m        android:id="@+id/degreeImageView"[m
+         android:layout_width="wrap_content"[m
+         android:layout_height="wrap_content"[m
+[31m-        android:id="@+id/degreeImageView"[m
+[31m-        android:layout_marginTop="50dp"[m
+         android:layout_alignTop="@+id/tempretureLable"[m
+[31m-        android:layout_toRightOf="@+id/tempretureLable"[m
+[32m+[m[32m        android:layout_marginTop="50dp"[m
+         android:layout_toEndOf="@+id/tempretureLable"[m
+[32m+[m[32m        android:layout_toRightOf="@+id/tempretureLable"[m
+         android:src="@drawable/degree" />[m
+ [m
+     <TextView[m
+[32m+[m[32m        android:id="@+id/Timelable"[m
+         android:layout_width="wrap_content"[m
+         android:layout_height="wrap_content"[m
+[32m+[m[32m        android:layout_above="@+id/tempretureLable"[m
+[32m+[m[32m        android:layout_centerHorizontal="true"[m
+         android:text="AT 5.00 AM It Will be"[m
+         android:textColor="#80ffffff"[m
+[31m-        android:textSize="18sp"[m
+[31m-        android:id="@+id/textView"[m
+[31m-        android:layout_above="@+id/tempretureLable"[m
+[31m-        android:layout_centerHorizontal="true" />[m
+[32m+[m[32m        android:textSize="18sp" />[m
+ [m
+     <TextView[m
+[32m+[m[32m        android:id="@+id/location"[m
+         android:layout_width="wrap_content"[m
+         android:layout_height="wrap_content"[m
+[32m+[m[32m        android:layout_above="@+id/Timelable"[m
+[32m+[m[32m        android:layout_centerHorizontal="true"[m
+[32m+[m[32m        android:layout_marginBottom="60dp"[m
+         android:text="Dhaka, Bangladesh"[m
+[31m-        android:id="@+id/location"[m
+[31m-        android:textSize="24sp"[m
+         android:textColor="#fff"[m
+[31m-        android:layout_marginBottom="60dp"[m
+[31m-        android:layout_above="@+id/textView"[m
+[31m-        android:layout_centerHorizontal="true" />[m
+[32m+[m[32m        android:textSize="24sp" />[m
+ [m
+     <ImageView[m
+[32m+[m[32m        android:id="@+id/iconimageView"[m
+         android:layout_width="wrap_content"[m
+         android:layout_height="wrap_content"[m
+[31m-        android:id="@+id/iconimageView"[m
+[31m-        android:src="@drawable/cloudy_night"[m
+[31m-        android:layout_marginRight="40dp"[m
+         android:layout_alignBottom="@+id/location"[m
+[32m+[m[32m        android:layout_marginRight="40dp"[m
+         android:layout_toLeftOf="@+id/textView"[m
+[31m-        android:layout_toStartOf="@+id/textView" />[m
+[32m+[m[32m        android:layout_toStartOf="@+id/textView"[m
+[32m+[m[32m        android:src="@drawable/cloudy_night" />[m
+ [m
+     <LinearLayout[m
+[31m-        android:orientation="horizontal"[m
+[32m+[m[32m        android:id="@+id/linearLayout"[m
+         android:layout_width="match_parent"[m
+         android:layout_height="wrap_content"[m
+         android:layout_below="@+id/tempretureLable"[m
+[31m-        android:layout_centerHorizontal="true">[m
+[32m+[m[32m        android:layout_centerHorizontal="true"[m
+[32m+[m[32m        android:orientation="horizontal"[m
+[32m+[m[32m        android:weightSum="100">[m
+ [m
+         <LinearLayout[m
+[31m-            android:orientation="vertical"[m
+[31m-            android:layout_width="match_parent"[m
+[31m-            android:layout_height="match_parent">[m
+[32m+[m[32m            android:layout_width="wrap_content"[m
+[32m+[m[32m            android:layout_height="wrap_content"[m
+[32m+[m[32m            android:layout_weight="50"[m
+[32m+[m[32m            android:gravity="center"[m
+[32m+[m[32m            android:orientation="vertical">[m
+ [m
+             <TextView[m
+[32m+[m[32m                android:id="@+id/humidityLable"[m
+                 android:layout_width="wrap_content"[m
+                 android:layout_height="wrap_content"[m
+[31m-                android:text="New Text"[m
+[31m-                android:id="@+id/textView2" />[m
+[32m+[m[32m                android:text="HUMIDITY"[m
+[32m+[m[32m                android:textColor="#fff"[m
+[32m+[m[32m                android:textStyle="bold" />[m
+ [m
+             <TextView[m
+[32m+[m[32m                android:id="@+id/humidityValue"[m
+                 android:layout_width="wrap_content"[m
+                 android:layout_height="wrap_content"[m
+[31m-                android:text="New Text"[m
+[31m-                android:id="@+id/textView3" />[m
+[32m+[m[32m                android:text="0.88"[m
+[32m+[m[32m                android:textColor="#fff"[m
+[32m+[m[32m                android:textSize="20sp" />[m
+         </LinearLayout>[m
+[32m+[m
+[32m+[m[32m        <LinearLayout[m
+[32m+[m[32m            android:layout_width="wrap_content"[m
+[32m+[m[32m            android:layout_height="wrap_content"[m
+[32m+[m[32m            android:layout_weight="50"[m
+[32m+[m[32m            android:gravity="center"[m
+[32m+[m[32m            android:orientation="vertical">[m
+[32m+[m
+[32m+[m[32m            <TextView[m
+[32m+[m[32m                android:id="@+id/precipLable"[m
+[32m+[m[32m                android:layout_width="wrap_content"[m
+[32m+[m[32m                android:layout_height="wrap_content"[m
+[32m+[m[32m                android:text="Rain/Cloud"[m
+[32m+[m[32m                android:textColor="#fff"[m
+[32m+[m[32m                android:textStyle="bold" />[m
+[32m+[m
+[32m+[m[32m            <TextView[m
+[32m+[m[32m                android:id="@+id/precipLablebottom"[m
+[32m+[m[32m                android:layout_width="wrap_content"[m
+[32m+[m[32m                android:layout_height="wrap_content"[m
+[32m+[m[32m                android:text="100%"[m
+[32m+[m[32m                android:textColor="#fff"[m
+[32m+[m[32m                android:textSize="20sp"[m
+[32m+[m[32m                android:textStyle="bold" />[m
+[32m+[m[32m        </LinearLayout>[m
+[32m+[m
+     </LinearLayout>[m
+[32m+[m
+[32m+[m[32m    <TextView[m
+[32m+[m[32m        android:id="@+id/summerLable"[m
+[32m+[m[32m        android:layout_width="wrap_content"[m
+[32m+[m[32m        android:layout_height="wrap_content"[m
+[32m+[m[32m        android:layout_below="@+id/linearLayout"[m
+[32m+[m[32m        android:layout_centerHorizontal="true"[m
+[32m+[m[32m        android:text="Stormy chance with a metalballS"[m
+[32m+[m[32m        android:textColor="#fff"[m
+[32m+[m[32m        android:textSize="18dp" />[m
+ </RelativeLayout>[m
+[1mdiff --git a/clear b/clear[m
+[1mnew file mode 100644[m
+[1mindex 0000000..8d51af9[m
+[1m--- /dev/null[m
+[1m+++ b/clear[m
+[36m@@ -0,0 +1,297 @@[m
+[32m+[m[32m[33mcommit c218c90fa312268bdcdacfbd4e6bb33bcb5bb1f0[m[m
+[32m+[m[32mAuthor: Imran <imufun1@gmail.com>[m
+[32m+[m[32mDate:   Wed Oct 21 23:15:26 2015 +0600[m
+[32m+[m
+[32m+[m[32m    Dhaka Weather[m
+[32m+[m
+[32m+[m[32m[1mdiff --git a/.gitignore b/.gitignore[m[m
+[32m+[m[32m[1mnew file mode 100644[m[m
+[32m+[m[32m[1mindex 0000000..9c4de58[m[m
+[32m+[m[32m[1m--- /dev/null[m[m
+[32m+[m[32m[1m+++ b/.gitignore[m[m
+[32m+[m[32m[36m@@ -0,0 +1,7 @@[m[m
+[32m+[m[32m[32m+[m[32m.gradle[m[m
+[32m+[m[32m[32m+[m[32m/local.properties[m[m
+[32m+[m[32m[32m+[m[32m/.idea/workspace.xml[m[m
+[32m+[m[32m[32m+[m[32m/.idea/libraries[m[m
+[32m+[m[32m[32m+[m[32m.DS_Store[m[m
+[32m+[m[32m[32m+[m[32m/build[m[m
+[32m+[m[32m[32m+[m[32m/captures[m[m
+[32m+[m[32m[1mdiff --git a/.idea/.name b/.idea/.name[m[m
+[32m+[m[32m[1mnew file mode 100644[m[m
+[32m+[m[32m[1mindex 0000000..15e6298[m[m
+[32m+[m[32m[1m--- /dev/null[m[m
+[32m+[m[32m[1m+++ b/.idea/.name[m[m
+[32m+[m[32m[36m@@ -0,0 +1 @@[m[m
+[32m+[m[32m[32m+[m[32mDhaka Weather[m[m
+[32m+[m[32m\ No newline at end of file[m[m
+[32m+[m[32m[1mdiff --git a/.idea/compiler.xml b/.idea/compiler.xml[m[m
+[32m+[m[32m[1mnew file mode 100644[m[m
+[32m+[m[32m[1mindex 0000000..96cc43e[m[m
+[32m+[m[32m[1m--- /dev/null[m[m
+[32m+[m[32m[1m+++ b/.idea/compiler.xml[m[m
+[32m+[m[32m[36m@@ -0,0 +1,22 @@[m[m
+[32m+[m[32m[32m+[m[32m<?xml version="1.0" encoding="UTF-8"?>[m[m
+[32m+[m[32m[32m+[m[32m<project version="4">[m[m
+[32m+[m[32m[32m+[m[32m  <component name="CompilerConfiguration">[m[m
+[32m+[m[32m[32m+[m[32m    <resourceExtensions />[m[m
+[32m+[m[32m[32m+[m[32m    <wildcardResourcePatterns>[m[m
+[32m+[m[32m[32m+[m[32m      <entry name="!?*.java" />[m[m
+[32m+[m[32m[32m+[m[32m      <entry name="!?*.form" />[m[m
+[32m+[m[32m[32m+[m[32m      <entry name="!?*.class" />[m[m
+[32m+[m[32m[32m+[m[32m      <entry name="!?*.groovy" />[m[m
+[32m+[m[32m[32m+[m[32m      <entry name="!?*.scala" />[m[m
+[32m+[m[32m[32m+[m[32m      <entry name="!?*.flex" />[m[m
+[32m+[m[32m[32m+[m[32m      <entry name="!?*.kt" />[m[m
+[32m+[m[32m[32m+[m[32m      <entry name="!?*.clj" />[m[m
+[32m+[m[32m[32m+[m[32m      <entry name="!?*.aj" />[m[m
+[32m+[m[32m[32m+[m[32m    </wildcardResourcePatterns>[m[m
+[32m+[m[32m[32m+[m[32m    <annotationProcessing>[m[m
+[32m+[m[32m[32m+[m[32m      <profile default="true" name="Default" enabled="false">[m[m
+[32m+[m[32m[32m+[m[32m        <processorPath useClasspath="true" />[m[m
+[32m+[m[32m[32m+[m[32m      </profile>[m[m
+[32m+[m[32m[32m+[m[32m    </annotationProcessing>[m[m
+[32m+[m[32m[32m+[m[32m  </component>[m[m
+[32m+[m[32m[32m+[m[32m</project>[m[m
+[32m+[m[32m\ No newline at end of file[m[m
+[32m+[m[32m[1mdiff --git a/.idea/copyright/profiles_settings.xml b/.idea/copyright/profiles_settings.xml[m[m
+[32m+[m[32m[1mnew file mode 100644[m[m
+[32m+[m[32m[1mindex 0000000..e7bedf3[m[m
+[32m+[m[32m[1m--- /dev/null[m[m
+[32m+[m[32m[1m+++ b/.idea/copyright/profiles_settings.xml[m[m
+[32m+[m[32m[36m@@ -0,0 +1,3 @@[m[m
+[32m+[m[32m[32m+[m[32m<component name="CopyrightManager">[m[m
+[32m+[m[32m[32m+[m[32m  <settings default="" />[m[m
+[32m+[m[32m[32m+[m[32m</component>[m[m
+[32m+[m[32m\ No newline at end of file[m[m
+[32m+[m[32m[1mdiff --git a/.idea/encodings.xml b/.idea/encodings.xml[m[m
+[32m+[m[32m[1mnew file mode 100644[m[m
+[32m+[m[32m[1mindex 0000000..97626ba[m[m
+[32m+[m[32m[1m--- /dev/null[m[m
+[32m+[m[32m[1m+++ b/.idea/encodings.xml[m[m
+[32m+[m[32m[36m@@ -0,0 +1,6 @@[m[m
+[32m+[m[32m[32m+[m[32m<?xml version="1.0" encoding="UTF-8"?>[m[m
+[32m+[m[32m[32m+[m[32m<project version="4">[m[m
+[32m+[m[32m[32m+[m[32m  <component name="Encoding">[m[m
+[32m+[m[32m[32m+[m[32m    <file url="PROJECT" charset="UTF-8" />[m[m
+[32m+[m[32m[32m+[m[32m  </component>[m[m
+[32m+[m[32m[32m+[m[32m</project>[m[m
+[32m+[m[32m\ No newline at end of file[m[m
+[32m+[m[32m[1mdiff --git a/.idea/gradle.xml b/.idea/gradle.xml[m[m
+[32m+[m[32m[1mnew file mode 100644[m[m
+[32m+[m[32m[1mindex 0000000..5f9069e[m[m
+[32m+[m[32m[1m--- /dev/null[m[m
+[32m+[m[32m[1m+++ b/.idea/gradle.xml[m[m
+[32m+[m[32m[36m@@ -0,0 +1,19 @@[m[m
+[32m+[m[32m[32m+[m[32m<?xml version="1.0" encoding="UTF-8"?>[m[m
+[32m+[m[32m[32m+[m[32m<project version="4">[m[m
+[32m+[m[32m[32m+[m[32m  <component name="GradleSettings">[m[m
+[32m+[m[32m[32m+[m[32m    <option name="linkedExternalProjectsSettings">[m[m
+[32m+[m[32m[32m+[m[32m      <GradleProjectSettings>[m[m
+[32m+[m[32m[32m+[m[32m        <option name="distributionType" value="LOCAL" />[m[m
+[32m+[m[32m[32m+[m[32m        <option name="externalProjectPath" value="$PROJECT_DIR$" />[m[m
+[32m+[m[32m[32m+[m[32m        <option name="gradleHome" value="F:\Android Studio\gradle\gradle-2.4" />[m[m
+[32m+[m[32m[32m+[m[32m        <option name="gradleJvm" value="1.8" />[m[m
+[32m+[m[32m[32m+[m[32m        <option name="modules">[m[m
+[32m+[m[32m[32m+[m[32m          <set>[m[m
+[32m+[m[32m[32m+[m[32m            <option value="$PROJECT_DIR$" />[m[m
+[32m+[m[32m[32m+[m[32m            <option value="$PROJECT_DIR$/app" />[m[m
+[32m+[m[32m[32m+[m[32m          </set>[m[m
+[32m+[m[32m[32m+[m[32m        </option>[m[m
+[32m+[m[32m[32m+[m[32m      </GradleProjectSettings>[m[m
+[32m+[m[32m[32m+[m[32m    </option>[m[m
+[32m+[m[32m[32m+[m[32m  </component>[m[m
+[32m+[m[32m[32m+[m[32m</project>[m[m
+[32m+[m[32m\ No newline at end of file[m[m
+[32m+[m[32m[1mdiff --git a/.idea/misc.xml b/.idea/misc.xml[m[m
+[32m+[m[32m[1mnew file mode 100644[m[m
+[32m+[m[32m[1mindex 0000000..5d19981[m[m
+[32m+[m[32m[1m--- /dev/null[m[m
+[32m+[m[32m[1m+++ b/.idea/misc.xml[m[m
+[32m+[m[32m[36m@@ -0,0 +1,46 @@[m[m
+[32m+[m[32m[32m+[m[32m<?xml version="1.0" encoding="UTF-8"?>[m[m
+[32m+[m[32m[32m+[m[32m<project version="4">[m[m
+[32m+[m[32m[32m+[m[32m  <component name="EntryPointsManager">[m[m
+[32m+[m[32m[32m+[m[32m    <entry_points version="2.0" />[m[m
+[32m+[m[32m[32m+[m[32m  </component>[m[m
+[32m+[m[32m[32m+[m[32m  <component name="NullableNotNullManager">[m[m
+[32m+[m[32m[32m+[m[32m    <option name="myDefaultNullable" value="android.support.annotation.Nullable" />[m[m
+[32m+[m[32m[32m+[m[32m    <option name="myDefaultNotNull" value="android.support.annotation.NonNull" />[m[m
+[32m+[m[32m[32m+[m[32m    <option name="myNullables">[m[m
+[32m+[m[32m[32m+[m[32m      <value>[m[m
+[32m+[m[32m[32m+[m[32m        <list size="4">[m[m
+[32m+[m[32m[32m+[m[32m          <item index="0" class="java.lang.String" itemvalue="org.jetbrains.annotations.Nullable" />[m[m
+[32m+[m[32m[32m+[m[32m          <item index="1" class="java.lang.String" itemvalue="javax.annotation.Nullable" />[m[m
+[32m+[m[32m[32m+[m[32m          <item index="2" class="java.lang.String" itemvalue="edu.umd.cs.findbugs.annotations.Nullable" />[m[m
+[32m+[m[32m[32m+[m[32m          <item index="3" class="java.lang.String" itemvalue="android.support.annotation.Nullable" />[m[m
+[32m+[m[32m[32m+[m[32m        </list>[m[m
+[32m+[m[32m[32m+[m[32m      </value>[m[m
+[32m+[m[32m[32m+[m[32m    </option>[m[m
+[32m+[m[32m[32m+[m[32m    <option name="myNotNulls">[m[m
+[32m+[m[32m[32m+[m[32m      <value>[m[m
+[32m+[m[32m[32m+[m[32m        <list size="4">[m[m
+[32m+[m[32m[32m+[m[32m          <item index="0" class="java.lang.String" itemvalue="org.jetbrains.annotations.NotNull" />[m[m
+[32m+[m[32m[32m+[m[32m          <item index="1" class="java.lang.String" itemvalue="javax.annotation.Nonnull" />[m[m
+[32m+[m[32m[32m+[m[32m          <item index="2" class="java.lang.String" itemvalue="edu.umd.cs.findbugs.annotations.NonNull" />[m[m
+[32m+[m[32m[32m+[m[32m          <item index="3" class="java.lang.String" itemvalue="android.support.annotation.NonNull" />[m[m
+[32m+[m[32m[32m+[m[32m        </list>[m[m
+[32m+[m[32m[32m+[m[32m      </value>[m[m
+[32m+[m[32m[32m+[m[32m    </option>[m[m
+[32m+[m[32m[32m+[m[32m  </component>[m[m
+[32m+[m[32m[32m+[m[32m  <component name="ProjectLevelVcsManager" settingsEditedManually="false">[m[m
+[32m+[m[32m[32m+[m[32m    <OptionsSetting value="true" id="Add" />[m[m
+[32m+[m[32m[32m+[m[32m    <OptionsSetting value="true" id="Remove" />[m[m
+[32m+[m[32m[32m+[m[32m    <OptionsSetting value="true" id="Checkout" />[m[m
+[32m+[m[32m[32m+[m[32m    <OptionsSetting value="true" id="Update" />[m[m
+[32m+[m[32m[32m+[m[32m    <OptionsSetting value="true" id="Status" />[m[m
+[32m+[m[32m[32m+[m[32m    <OptionsSetting value="true" id="Edit" />[m[m
+[32m+[m[32m[32m+[m[32m    <ConfirmationsSetting value="0" id="Add" />[m[m
+[32m+[m[32m[32m+[m[32m    <ConfirmationsSetting value="0" id="Remove" />[m[m
+[32m+[m[32m[32m+[m[32m  </component>[m[m
+[32m+[m[32m[32m+[m[32m  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" default="true" assert-keyword="true" jdk-15="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">[m[m
+[32m+[m[32m[32m+[m[32m    <output url="file://$PROJECT_DIR$/build/classes" />[m[m
+[32m+[m[32m[32m+[m[32m  </component>[m[m
+[32m+[m[32m[32m+[m[32m  <component name="ProjectType">[m[m
+[32m+[m[32m[32m+[m[32m    <option name="id" value="Android" />[m[m
+[32m+[m[32m[32m+[m[32m  </component>[m[m
+[32m+[m[32m[32m+[m[32m</project>[m[m
+[32m+[m[32m\ No newline at end of file[m[m
+[32m+[m[32m[1mdiff --git a/.idea/modules.xml b/.idea/modules.xml[m[m
+[32m+[m[32m[1mnew file mode 100644[m[m
+[32m+[m[32m[1mindex 0000000..5c76e00[m[m
+[32m+[m[32m[1m--- /dev/null[m[m
+[32m+[m[32m[1m+++ b/.idea/modules.xml[m[m
+[32m+[m[32m[36m@@ -0,0 +1,9 @@[m[m
+[32m+[m[32m[32m+[m[32m<?xml version="1.0" encoding="UTF-8"?>[m[m
+[32m+[m[32m[32m+[m[32m<project version="4">[m[m
+[32m+[m[32m[32m+[m[32m  <component name="ProjectModuleManager">[m[m
+[32m+[m[32m[32m+[m[32m    <modules>[m[m
+[32m+[m[32m[32m+[m[32m      <module fileurl="file://$PROJECT_DIR$/DhakaWeather.iml" filepath="$PROJECT_DIR$/DhakaWeather.iml" />[m[m
+[32m+[m[32m[32m+[m[32m      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />[m[m
+[32m+[m[32m[32m+[m[32m    </modules>[m[m
+[32m+[m[32m[32m+[m[32m  </component>[m[m
+[32m+[m[32m[32m+[m[32m</project>[m[m
+[32m+[m[32m\ No newline at end of file[m[m
+[32m+[m[32m[1mdiff --git a/.idea/runConfigurations.xml b/.idea/runConfigurations.xml[m[m
+[32m+[m[32m[1mnew file mode 100644[m[m
+[32m+[m[32m[1mindex 0000000..7f68460[m[m
+[32m+[m[32m[1m--- /dev/null[m[m
+[32m+[m[32m[1m+++ b/.idea/runConfigurations.xml[m[m
+[32m+[m[32m[36m@@ -0,0 +1,12 @@[m[m
+[32m+[m[32m[32m+[m[32m<?xml version="1.0" encoding="UTF-8"?>[m[m
+[32m+[m[32m[32m+[m[32m<project version="4">[m[m
+[32m+[m[32m[32m+[m[32m  <component name="RunConfigurationProducerService">[m[m
+[32m+[m[32m[32m+[m[32m    <option name="ignoredProducers">[m[m
+[32m+[m[32m[32m+[m[32m      <set>[m[m
+[32m+[m[32m[32m+[m[32m        <option value="org.jetbrains.plugins.gradle.execution.test.runner.AllInPackageGradleConfigurationProducer" />[m[m
+[32m+[m[32m[32m+[m[32m        <option value="org.jetbrains.plugins.gradle.execution.test.runner.TestClassGradleConfigurationProducer" />[m[m
+[32m+[m[32m[32m+[m[32m        <option value="org.jetbrains.plugins.gradle.execution.test.runner.TestMethodGradleConfigurationProducer" />[m[m
+[32m+[m[32m[32m+[m[32m      </set>[m[m
+[32m+[m[32m[32m+[m[32m    </option>[m[m
+[32m+[m[32m[32m+[m[32m  </component>[m[m
+[32m+[m[32m[32m+[m[32m</project>[m[m
+[32m+[m[32m\ No newline at end of file[m[m
+[32m+[m[32m[1mdiff --git a/.idea/vcs.xml b/.idea/vcs.xml[m[m
+[32m+[m[32m[1mnew file mode 100644[m[m
+[32m+[m[32m[1mindex 0000000..6564d52[m[m
+[32m+[m[32m[1m--- /dev/null[m[m
+[32m+[m[32m[1m+++ b/.idea/vcs.xml[m[m
+[32m+[m[32m[36m@@ -0,0 +1,6 @@[m[m
+[32m+[m[32m[32m+[m[32m<?xml version="1.0" encoding="UTF-8"?>[m[m
+[32m+[m[32m[32m+[m[32m<project version="4">[m[m
+[32m+[m[32m[32m+[m[32m  <component name="VcsDirectoryMappings">[m[m
+[32m+[m[32m[32m+[m[32m    <mapping directory="" vcs="" />[m[m
+[32m+[m[32m[32m+[m[32m  </component>[m[m
+[32m+[m[32m[32m+[m[32m</project>[m[m
+[32m+[m[32m\ No newline at end of file[m[m
+[32m+[m[32m[1mdiff --git a/DhakaWeather.iml b/DhakaWeather.iml[m[m
+[32m+[m[32m[1mnew file mode 100644[m[m
+[32m+[m[32m[1mindex 0000000..5421718[m[m
+[32m+[m[32m[1m--- /dev/null[m[m
+[32m+[m[32m[1m+++ b/DhakaWeather.iml[m[m
+[32m+[m[32m[36m@@ -0,0 +1,19 @@[m[m
+[32m+[m[32m[32m+[m[32m<?xml version="1.0" encoding="UTF-8"?>[m[m
+[32m+[m[32m[32m+[m[32m<module external.linked.project.id="DhakaWeather" external.linked.project.path="$MODULE_DIR$" external.root.project.path="$MODULE_DIR$" external.system.id="GRADLE" external.system.module.group="" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">[m[m
+[32m+[m[32m[32m+[m[32m  <component name="FacetManager">[m[m
+[32m+[m[32m[32m+[m[32m    <facet type="java-gradle" name="Java-Gradle">[m[m
+[32m+[m[32m[32m+[m[32m      <configuration>[m[m
+[32m+[m[32m[32m+[m[32m        <option name="BUILD_FOLDER_PATH" value="$MODULE_DIR$/build" />[m[m
+[32m+[m[32m[32m+[m[32m        <option name="BUILDABLE" value="false" />[m[m
+[32m+[m[32m[32m+[m[32m      </configuration>[m[m
+[32m+[m[32m[32m+[m[32m    </facet>[m[m
+[32m+[m[32m[32m+[m[32m  </component>[m[m
+[32m+[m[32m[32m+[m[32m  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7" inherit-compiler-output="true">[m[m
+[32m+[m[32m[32m+[m[32m    <exclude-output />[m[m
+[32m+[m[32m[32m+[m[32m    <content url="file://$MODULE_DIR$">[m[m
+[32m+[m[32m[32m+[m[32m      <excludeFolder url="file://$MODULE_DIR$/.gradle" />[m[m
+[32m+[m[32m[32m+[m[32m    </content>[m[m
+[32m+[m[32m[32m+[m[32m    <orderEntry type="inheritedJdk" />[m[m
+[32m+[m[32m[32m+[m[32m    <orderEntry type="sourceFolder" forTests="false" />[m[m
+[32m+[m[32m[32m+[m[32m  </component>[m[m
+[32m+[m[32m[32m+[m[32m</module>[m[m
+[32m+[m[32m\ No newline at end of file[m[m
+[32m+[m[32m[1mdiff --git a/app/.gitignore b/app/.gitignore[m[m
+[32m+[m[32m[1mnew file mode 100644[m[m
+[32m+[m[32m[1mindex 0000000..796b96d[m[m
+[32m+[m[32m[1m--- /dev/null[m[m
+[32m+[m[32m[1m+++ b/app/.gitignore[m[m
+[32m+[m[32m[36m@@ -0,0 +1 @@[m[m
+[32m+[m[32m[32m+[m[32m/build[m[m
+[32m+[m[32m[1mdiff --git a/app/app.iml b/app/app.iml[m[m
+[32m+[m[32m[1mnew file mode 100644[m[m
+[32m+[m[32m[1mindex 0000000..063f6fd[m[m
+[32m+[m[32m[1m--- /dev/null[m[m
+[32m+[m[32m[1m+++ b/app/app.iml[m[m
+[32m+[m[32m[36m@@ -0,0 +1,103 @@[m[m
+[32m+[m[32m[32m+[m[32m<?xml version="1.0" encoding="UTF-8"?>[m[m
+[32m+[m[32m[32m+[m[32m<module external.linked.project.id=":app" external.linked.project.path="$MODULE_DIR$" external.root.project.path="$MODULE_DIR$/.." external.system.id="GRADLE" external.system.module.group="DhakaWeather" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">[m[m
+[32m+[m[32m[32m+[m[32m  <component name="FacetManager">[m[m
+[32m+[m[32m[32m+[m[32m    <facet type="android-gradle" name="Android-Gradle">[m[m
+[32m+[m[32m[32m+[m[32m      <configuration>[m[m
+[32m+[m[32m[32m+[m[32m        <option name="GRADLE_PROJECT_PATH" value=":app" />[m[m
+[32m+[m[32m[32m+[m[32m      </configuration>[m[m
+[32m+[m[32m[32m+[m[32m    </facet>[m[m
+[32m+[m[32m[32m+[m[32m    <facet type="android" name="Android">[m[m
+[32m+[m[32m[32m+[m[32m      <configuration>[m[m
+[32m+[m[32m[32m+[m[32m        <option name="SELECTED_BUILD_VARIANT" value="debug" />[m[m
+[32m+[m[32m[32m+[m[32m        <option name="SELECTED_TEST_ARTIFACT" value="_android_test_" />[m[m
+[32m+[m[32m[32m+[m[32m        <option name="ASSEMBLE_TASK_NAME" value="assembleDebug" />[m[m
+[32m+[m[32m[32m+[m[32m        <option name="COMPILE_JAVA_TASK_NAME" value="compileDebugSources" />[m[m
+[32m+[m[32m[32m+[m[32m        <option name="ASSEMBLE_TEST_TASK_NAME" value="assembleDebugAndroidTest" />[m[m
+[32m+[m[32m[32m+[m[32m        <option name="COMPILE_JAVA_TEST_TASK_NAME" value="compileDebugAndroidTestSources" />[m[m
+[32m+[m[32m[32m+[m[32m        <afterSyncTasks>[m[m
+[32m+[m[32m[32m+[m[32m          <task>generateDebugAndroidTestSources</task>[m[m
+[32m+[m[32m[32m+[m[32m          <task>generateDebugSources</task>[m[m
+[32m+[m[32m[32m+[m[32m        </afterSyncTasks>[m[m
+[32m+[m[32m[32m+[m[32m        <option name="ALLOW_USER_CONFIGURATION" value="false" />[m[m
+[32m+[m[32m[32m+[m[32m        <option name="MANIFEST_FILE_RELATIVE_PATH" value="/src/main/AndroidManifest.xml" />[m[m
+[32m+[m[32m[32m+[m[32m        <option name="RES_FOLDER_RELATIVE_PATH" value="/src/main/res" />[m[m
+[32m+[m[32m[32m+[m[32m        <option name="RES_FOLDERS_RELATIVE_PATH" value="file://$MODULE_DIR$/src/main/res" />[m[m
+[32m+[m[32m[32m+[m[32m        <option name="ASSETS_FOLDER_RELATIVE_PATH" value="/src/main/assets" />[m[m
+[32m+[m[32m[32m+[m[32m      </configuration>[m[m
+[32m+[m[32m[32m+[m[32m    </facet>[m[m
+[32m+[m[32m[32m+[m[32m  </component>[m[m
+[32m+[m[32m[32m+[m[32m  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7" inherit-compiler-output="false">[m[m
+[32m+[m[32m[32m+[m[32m    <output url="file://$MODULE_DIR$/build/intermediates/classes/debug" />[m[m
+[32m+[m[32m[32m+[m[32m    <output-test url="file://$MODULE_DIR$/build/intermediates/classes/androidTest/debug" />[m[m
+[32m+[m[32m[32m+[m[32m    <exclude-output />[m[m
+[32m+[m[32m[32m+[m[32m    <content url="file://$MODULE_DIR$">[m[m
+[32m+[m[32m[32m+[m[32m      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/r/debug" isTestSource="false" generated="true" />[m[m
+[32m+[m[32m[32m+[m[32m      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/aidl/debug" isTestSource="false" generated="true" />[m[m
+[32m+[m[32m[32m+[m[32m      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/buildConfig/debug" isTestSource="false" generated="true" />[m[m
+[32m+[m[32m[32m+[m[32m      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/rs/debug" isTestSource="false" generated="true" />[m[m
+[32m+[m[32m[32m+[m[32m      <sourceFolder url="file://$MODULE_DIR$/build/generated/res/rs/debug" type="java-resource" />[m[m
+[32m+[m[32m[32m+[m[32m      <sourceFolder url="file://$MODULE_DIR$/build/generated/res/resValues/debug" type="java-resource" />[m[m
+[32m+[m[32m[32m+[m[32m      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/r/androidTest/debug" isTestSource="true" generated="true" />[m[m
+[32m+[m[32m[32m+[m[32m      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/aidl/androidTest/debug" isTestSource="true" generated="true" />[m[m
+[32m+[m[32m[32m+[m[32m      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/buildConfig/androidTest/debug" isTestSource="true" generated="true" />[m[m
+[32m+[m[32m[32m+[m[32m      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/rs/androidTest/debug" isTestSource="true" generated="true" />[m[m
+[32m+[m[32m[32m+[m[32m      <sourceFolder url="file://$MODULE_DIR$/build/generated/res/rs/androidTest/debug" type="java-test-resource" />[m[m
+[32m+[m[32m[32m+[m[32m      <sourceFolder url="file://$MODULE_DIR$/build/generated/res/resValues/androidTest/debug" type="java-test-resource" />[m[m
+[32m+[m[32m[32m+[m[32m      <sourceFolder url="file://$MODULE_DIR$/src/debug/res" type="java-resource" />[m[m
+[32m+[m[32m[32m+[m[32m      <sourceFolder url="file://$MODULE_DIR$/src/debug/resources" type="java-resource" />[m[m
+[32m+[m[32m[32m+[m[32m      <sourceFolder url="file://$MODULE_DIR$/src/debug/assets" type="java-resource" />[m[m
+[32m+[m[32m[32m+[m[32m      <sourceFolder url="file://$MODULE_DIR$/src/debug/aidl" isTestSource="false" />[m[m
+[32m+[m[32m[32m+[m[32m      <sourceFolder url="file://$MODULE_DIR$/src/debug/java" isTestSource="false" />[m[m
+[32m+[m[32m[32m+[m[32m      <sourceFolder url="file://$MODULE_DIR$/src/debug/jni" isTestSource="false" />[m[m
+[32m+[m[32m[32m+[m[32m      <sourceFolder url="file://$MODULE_DIR[m
+\ No newline at end of file[m

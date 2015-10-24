@@ -1,6 +1,7 @@
 package com.example.imran.dhakaweather;
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
@@ -25,7 +26,6 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 
-import butterknife.Bind;
 import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
@@ -133,8 +133,11 @@ public class MainActivity extends AppCompatActivity {
         MtempretureLable.setText(mCurrentWeather.getmTeamperature() + "");
         mTimeLable.setText("At" + mCurrentWeather.getFormattedTime() + " It will be");
         mhumidityLable.setText(mCurrentWeather.getmHumidity() + "");
-        mprecipLable.setText(mCurrentWeather.getmPrecipChance() + "");
+        mprecipLable.setText(mCurrentWeather.getmPrecipChance() + "%");
         msummerLable.setText(mCurrentWeather.getmSummary());
+
+        Drawable drawable = getResources().getDrawable(mCurrentWeather.getIconId());
+        miconimageView.setImageDrawable(drawable);
 
 
     }
