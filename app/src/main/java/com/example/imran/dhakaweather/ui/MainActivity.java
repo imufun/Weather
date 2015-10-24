@@ -1,4 +1,4 @@
-package com.example.imran.dhakaweather;
+package com.example.imran.dhakaweather.ui;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
@@ -16,6 +16,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.imran.dhakaweather.R;
 import com.example.imran.dhakaweather.weather.Current;
 import com.squareup.okhttp.Call;
 import com.squareup.okhttp.Callback;

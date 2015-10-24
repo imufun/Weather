@@ -1,10 +1,12 @@
-package com.example.imran.dhakaweather;
+package com.example.imran.dhakaweather.ui;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.content.Context;
 import android.os.Bundle;
+
+import com.example.imran.dhakaweather.R;
 
 /**
  * Created by Imran on 10/21/2015.
