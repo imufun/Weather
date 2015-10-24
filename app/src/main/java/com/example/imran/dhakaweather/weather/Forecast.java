@@ -1,4 +1,4 @@
-package com.example.imran.dhakaweather;
+package com.example.imran.dhakaweather.weather;
 
 import java.util.Date;
 

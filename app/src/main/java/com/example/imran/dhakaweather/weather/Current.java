@@ -1,4 +1,6 @@
-package com.example.imran.dhakaweather;
+package com.example.imran.dhakaweather.weather;
+
+import com.example.imran.dhakaweather.R;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
