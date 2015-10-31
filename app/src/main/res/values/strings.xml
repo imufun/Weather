@@ -5,4 +5,7 @@
     <string name="error_message">messge</string>
     <string name="ok">ok</string>
     <string name="network_error">network</string>
+    <string name="title_activity_daily_forcaste">Daily_forcaste</string>
+    <string name="title_activity_daily_forcast">DailyForcastActivity</string>
+    <string name="no_daily_data">There is no data Display</string>
 </resources>

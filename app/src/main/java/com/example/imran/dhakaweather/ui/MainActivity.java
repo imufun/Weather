@@ -1,6 +1,7 @@
 package com.example.imran.dhakaweather.ui;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -32,6 +33,7 @@ import org.json.JSONObject;
 import java.io.IOException;
 
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = MainActivity.class.getName();
@@ -313,4 +315,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    @OnClick(R.id.DailyButton)
+    public void startDailyActivity(View view) {
+
+        Intent intent = new Intent(this, DailyForcastActivity.class);
+        startActivity(intent);
+    }
 }
