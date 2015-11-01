@@ -3,6 +3,10 @@
                 xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:paddingLeft="64dp"
+                android:paddingRight="40dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
                 tools:background="#77b5fb">
 
     <ImageView
@@ -43,4 +47,16 @@
         android:textColor="#ffffffff"
         android:textSize="20sp"
         tools:text="Wednesday"/>
+
+    <TextView
+        android:id="@+id/teamperatureLable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/circleImagesView"
+        android:layout_alignLeft="@id/circleImagesView"
+        android:layout_alignRight="@+id/circleImagesView"
+        android:layout_alignTop="@id/circleImagesView"
+        android:gravity="center"
+        android:textColor="#f25109"
+        tools:text="New Text"/>
 </RelativeLayout>
