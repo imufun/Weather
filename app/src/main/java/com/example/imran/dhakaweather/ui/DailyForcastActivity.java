@@ -16,6 +16,7 @@ public class DailyForcastActivity extends ListActivity {
 
         String[] thedailyReport = {"Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"};
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, thedailyReport);
+
         setListAdapter(adapter);
 
 

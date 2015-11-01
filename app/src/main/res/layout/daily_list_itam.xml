@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:background="#77b5fb">
+
+    <ImageView
+        android:id="@+id/circleImagesView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bg_temperature"/>
+
+    <ImageView
+        android:id="@+id/iconImaesView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/circleImagesView"
+        android:layout_toRightOf="@+id/circleImagesView"
+        android:background="@drawable/clear_day"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/iconImaesView"
+        android:layout_alignEnd="@+id/iconImaesView"
+        android:layout_alignRight="@+id/iconImaesView"
+        android:text="New Text"/>
+
+    <TextView
+        android:id="@+id/dayNamelable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/iconImaesView"
+        android:layout_toRightOf="@+id/iconImaesView"
+        android:text="New Text"
+        android:textColor="#ffffffff"
+        android:textSize="20sp"
+        tools:text="Wednesday"/>
+</RelativeLayout>
