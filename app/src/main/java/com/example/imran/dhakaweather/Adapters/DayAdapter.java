@@ -55,6 +55,14 @@ public class DayAdapter extends BaseAdapter {
         } else {
             holder = (ViewHolder) convertView.getTag();
         }
+
+        Day day = mDays[position];
+
+        holder.iconImaesView.setImageResource(day.getIconId());
+        holder.teamperatureLable.setText(day.getmTemperatureMax() + "");
+        holder.dayNamelable.setText(day.getDayOfTheWeek());
+
+
         return null;
     }
 

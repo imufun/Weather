@@ -1,7 +1,5 @@
 package com.example.imran.dhakaweather.weather;
 
-import com.example.imran.dhakaweather.R;
-
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.TimeZone;
@@ -26,34 +24,8 @@ public class Current {
 
     public int getIconId() {
 
-        //clear-day, clear-night, rain, snow, sleet, wind, fog, cloudy, partly-cloudy-day, or partly-cloudy-night
-        int iconId = R.drawable.clear_day;
-        if (Icon.equals("clear-day")) {
-            iconId = R.drawable.clear_day;
-        } else if (Icon.equals("clear-night")) {
-            iconId = R.drawable.clear_night;
-        } else if (Icon.equals("rain")) {
-            iconId = R.drawable.rain;
-        } else if (Icon.equals("sleet")) {
-            iconId = R.drawable.sleet;
-        } else if (Icon.equals("snow")) {
-            iconId = R.drawable.snow;
-        } else if (Icon.equals("fog")) {
-            iconId = R.drawable.fog;
-        } else if (Icon.equals("sunny")) {
-            iconId = R.drawable.sunny;
-        } else if (Icon.equals("cloudy")) {
-            iconId = R.drawable.cloudy;
-        } else if (Icon.equals("wind")) {
-            iconId = R.drawable.wind;
-        } else if (Icon.equals("degree")) {
-            iconId = R.drawable.degree;
-        } else if (Icon.equals("partly-cloudy-day ")) {
-            iconId = R.drawable.partly_cloudy;
-        } else if (Icon.equals("partly-cloudy-night")) {
-            iconId = R.drawable.cloudy_night;
-        }
-        return iconId;
+        return Forecast.getIconId(Icon);
+
     }
 
     public void setIcon(String icon) {
@@ -120,4 +92,5 @@ public class Current {
     public void setmSummary(String mSummary) {
         this.mSummary = mSummary;
     }
+
 }
